@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 1 - PHPを実行して観察する
-- 現在のレッスン: Day 1 - PHPを実行する、値と型を見る
-- 状態: review
-- 次にやること: 実行結果をもとに、`echo`、`var_dump`、`gettype`、暗黙の型変換を説明できるようにする
+- 現在のレッスン: Day 2 - `strict_types` と関数
+- 状態: in progress
+- 次にやること: `declare` と関数の引数型・戻り値型を最小コードで確認する
 
 ## 進め方
 
@@ -44,8 +44,8 @@
 
 | Day | ゴール | 状態 | 完了日 |
 | --- | --- | --- | --- |
-| Day 1 | PHPを実行する、値と型を見る | review | - |
-| Day 2 | `strict_types` と関数 | not started | - |
+| Day 1 | PHPを実行する、値と型を見る | done | 2026-06-25 |
+| Day 2 | `strict_types` と関数 | in progress | - |
 | Day 3 | 条件分岐とループ | not started | - |
 | Day 4 | 配列と連想配列 | not started | - |
 | Day 5 | 関数に分ける | not started | - |
@@ -60,8 +60,17 @@
 - [x] `var_dump` が値と型を表示することを確認した
 - [x] `gettype` が型名を返すことを確認した
 - [x] `$years + '5'` の結果を確認した
-- [ ] PHPが暗黙に型変換する場面を説明できる
-- [ ] `declare(strict_types=1);` はまだ書かない理由を説明できる
+- [x] PHPが暗黙に型変換する場面を説明できる
+- [x] `declare(strict_types=1);` はまだ書かない理由を説明できる
+
+## Day 2チェックリスト
+
+- [ ] `declare` がファイルの振る舞いを指定する構文だと説明できる
+- [ ] 関数を定義して呼び出せる
+- [ ] 引数型と戻り値型を書ける
+- [ ] `strict_types` なしでの挙動を確認した
+- [ ] `strict_types` ありでの挙動を確認した
+- [ ] `TypeError` を読める
 
 ## 理解チェック
 
@@ -87,6 +96,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `hello.php` を実行し、Day 1 の観察結果を確認した
 - Day 1 を `review` に切り替えた
 - 学習ジャーナルを残す運用を追加した
+- Day 1 を `done` に切り替えた
+- Day 2 を `in progress` に切り替えた
 
 ## 保留事項
 

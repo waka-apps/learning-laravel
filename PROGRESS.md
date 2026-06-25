@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 1 - PHPを実行して観察する
 - 現在のレッスン: Day 3 - 条件分岐とループ
-- 状態: not started
-- 次にやること: Day 3 を開始したら、条件分岐とループの最小コードで進める
+- 状態: in progress
+- 次にやること: `if`、`match`、`foreach` を最小コードで確認する
 
 ## 進め方
 
@@ -47,7 +47,7 @@
 | --- | --- | --- | --- |
 | Day 1 | PHPを実行する、値と型を見る | done | 2026-06-25 |
 | Day 2 | `strict_types` と関数 | done | 2026-06-26 |
-| Day 3 | 条件分岐とループ | not started | - |
+| Day 3 | 条件分岐とループ | in progress | - |
 | Day 4 | 配列と連想配列 | not started | - |
 | Day 5 | 関数に分ける | not started | - |
 | Day 6 | クラスの入口 | not started | - |
@@ -72,6 +72,14 @@
 - [x] `strict_types` なしでの挙動を確認した
 - [x] `strict_types` ありでの挙動を確認した
 - [x] `TypeError` を読める
+
+## Day 3チェックリスト
+
+- [ ] `if` を使って条件分岐できる
+- [ ] `match` を使って値ごとの分岐を書ける
+- [ ] `foreach` で配列をループできる
+- [ ] PHPの真偽値判定が緩い場面を1つ説明できる
+- [ ] `if` と `match` の使い分けを説明できる
 
 ## 理解チェック
 
@@ -103,6 +111,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 2 の `strict_types` 比較実行を確認した
 - Day 2 を `review` に切り替えた
 - Day 2 を `done` に切り替えた
+- Day 3 を `in progress` に切り替えた
 
 ## 保留事項
 

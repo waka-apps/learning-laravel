@@ -1,12 +1,10 @@
 <?php
+declare(strict_types=1);
 
-$name = 'Wakabayashi';
-$years = 10;
+function add(int $a, int $b): int
+{
+    return $a + $b;
+}
 
-echo "Hello, {$name}\n";
-echo "Experience: {$years} years\n";
-
-var_dump($name);
-var_dump($years);
-var_dump($years + '5');
-var_dump(gettype($years));
+var_dump(add(1, 2));
+var_dump(add('1', '2'));

@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 1 - PHPを実行して観察する
 - 現在のレッスン: Day 2 - `strict_types` と関数
-- 状態: in progress
-- 次にやること: `declare` と関数の引数型・戻り値型を最小コードで確認する
+- 状態: review
+- 次にやること: `declare` の意味と `TypeError` の内容を自分の言葉で説明できるようにする
 
 ## 進め方
 
@@ -46,7 +46,7 @@
 | Day | ゴール | 状態 | 完了日 |
 | --- | --- | --- | --- |
 | Day 1 | PHPを実行する、値と型を見る | done | 2026-06-25 |
-| Day 2 | `strict_types` と関数 | in progress | - |
+| Day 2 | `strict_types` と関数 | review | - |
 | Day 3 | 条件分岐とループ | not started | - |
 | Day 4 | 配列と連想配列 | not started | - |
 | Day 5 | 関数に分ける | not started | - |
@@ -67,10 +67,10 @@
 ## Day 2チェックリスト
 
 - [ ] `declare` がファイルの振る舞いを指定する構文だと説明できる
-- [ ] 関数を定義して呼び出せる
-- [ ] 引数型と戻り値型を書ける
-- [ ] `strict_types` なしでの挙動を確認した
-- [ ] `strict_types` ありでの挙動を確認した
+- [x] 関数を定義して呼び出せる
+- [x] 引数型と戻り値型を書ける
+- [x] `strict_types` なしでの挙動を確認した
+- [x] `strict_types` ありでの挙動を確認した
 - [ ] `TypeError` を読める
 
 ## 理解チェック
@@ -100,6 +100,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 1 を `done` に切り替えた
 - Day 2 を `in progress` に切り替えた
 - ジャーナル用コミットには、学習で触ったPHPファイルも含める運用に変更した
+- Day 2 の `strict_types` 比較実行を確認した
+- Day 2 を `review` に切り替えた
 
 ## 保留事項
 

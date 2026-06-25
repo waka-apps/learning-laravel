@@ -1,237 +1,424 @@
-# PHP / Laravel Catch-up Plan
+# PHP / Laravel Learning Plan
 
 作成日: 2026-06-25
 
-## 前提
+## 最重要の共通理解
 
-- 対象者: TypeScript / React / Next.js と Go / Gin の実務経験があるミドルクラスのWebエンジニア
-- 目的: 入社前に PHP と Laravel の実務投入に必要な勘所を掴む
-- 関心: 物流ドメイン、DDD、ドメインモデリング
-- 方針: 言語仕様を暗記するより、Laravelの標準的な書き方で小さな業務アプリを作りながら覚える
+この学習の最優先目的は、Laravelを急いで触ることではなく、まずPHPを理解すること。
 
-## ゴール
+学習者はTypeScript / React / Next.js と Go / Gin の実務経験があるが、PHPについては初学者として扱う。したがって、PHPの構文、実行方法、型、関数、クラス、配列、例外、Composerを理解する前に、LaravelのController、Eloquent、Service Containerなどへ進まない。
 
-4週間で、既存Laravelコードベースに入って以下ができる状態を目指す。
+LaravelはPHPの上にあるフレームワークなので、PHPの基本が曖昧なままLaravelへ入ると、以下の区別ができなくなる。
 
-- PHPの型、配列、クラス、名前空間、例外、Composerの基本を読める
-- Laravelのリクエスト処理、ルーティング、Controller、Form Request、Service Containerを説明できる
-- Migration、Factory、Seeder、Eloquent、Query Builderを使ってDB中心の機能を実装できる
-- Feature Test / Unit Testを書き、既存のテスト方針に合わせて変更できる
-- Queue、Job、Event、Notification、Scheduleの使い所を判断できる
-- LaravelのActive Record寄りの設計とDDD寄りの設計の折り合いをつけられる
+- PHP言語そのものの仕様
+- Composerやautoloadの仕組み
+- Laravelの規約
+- EloquentなどLaravel固有の抽象
+- プロジェクト固有の設計判断
 
-## 学習の軸
+この区別をできるようにすることを、最初のゴールにする。
 
-### 1. PHPを「読める」状態にする
+## 学習モードのルール
 
-重点:
+Codexは、以下のルールで学習をサポートする。
 
+- 未説明の構文やキーワードを、課題の前提にしない
+- 新しい概念を出すときは、まず「何か」「なぜ必要か」「Go / TypeScriptで近いものは何か」を説明する
+- 1回の課題で新しく扱う概念は少数に絞る
+- 実装量より、実行結果を観察して理解することを優先する
+- Laravelへ進む前に、PHPとして読める・書ける状態を作る
+- 物流ドメインやDDDは、PHP基礎が見えてから題材として使う
+
+各レッスンは次の形で進める。
+
+1. 今日のゴール
+2. 新しい概念の説明
+3. 小さなコード例
+4. 実行して観察すること
+5. 自分で少し変える課題
+6. レビュー観点
+7. 次へ進む条件
+
+## 全体ゴール
+
+最終的には、次の職場のLaravelコードベースに入って、既存コードを読み、軽微な機能追加や修正を自力で進められる状態を目指す。
+
+具体的には以下を目標にする。
+
+- PHPファイルを実行し、エラーを読める
+- PHPの変数、型、配列、関数、クラス、enum、例外を説明できる
+- Composer、autoload、namespaceの意味を理解できる
+- Laravelのリクエスト処理の流れを説明できる
+- Controller、Form Request、Model、Migration、Factory、Testを使える
+- Eloquentの便利さと危険な点を理解できる
+- LaravelのActive Record寄りの設計とDDD寄りの設計の違いを説明できる
+
+## フェーズ構成
+
+### Phase 1: PHPを実行して観察する
+
+目的:
+
+PHPのファイルを実行し、基本文法と型の挙動を体で掴む。
+
+扱うこと:
+
+- `<?php`
+- `php file.php`
+- コメント
+- 変数
+- 文字列
+- 数値
+- 真偽値
+- `echo`
+- `var_dump`
+- `gettype`
+- 暗黙の型変換
 - `declare(strict_types=1);`
-- scalar / nullable / union / intersection / readonly / enum
-- 配列と連想配列
-- `namespace` / `use`
-- Composer、autoload、PSR-4
-- 例外、DateTimeImmutable、Carbon
-- PHPStan / Pint / PHPUnit or Pest
 
-TS / Go経験者向けの注意:
+この段階では、クラス、namespace、Composer、Laravelは扱わない。
 
-- PHPの配列は list / map / object-like data の役割が混ざりやすい
-- Laravelでは型安全性より規約とテストで守る領域が多い
-- Eloquent Modelは永続化モデルであり、純粋なドメインエンティティとは限らない
+完了条件:
 
-### 2. Laravelのリクエスト処理を掴む
+- PHPファイルを作ってCLIで実行できる
+- `var_dump` を使って値と型を確認できる
+- PHPが暗黙に型変換する場面を説明できる
+- `strict_types` が必要になる理由を説明できる
 
-重点:
+### Phase 2: 関数と配列
 
-- `routes/web.php` と `routes/api.php`
-- Controller
-- Form Request validation
-- Middleware
-- Service Container / dependency injection
-- Config / env
-- Authentication / Authorization の入口
+目的:
 
-成果物:
+PHPで小さな処理を関数に分け、配列を扱えるようにする。
 
-- 荷物追跡APIのCRUD
-- 入力バリデーション
-- API Resourceでレスポンス整形
-- Feature Test
+扱うこと:
 
-### 3. DBとEloquentを重点的にやる
+- 関数定義
+- 引数の型
+- 戻り値の型
+- nullable型
+- 配列
+- 連想配列
+- `foreach`
+- `array_map`, `array_filter` などの基本
+- PHPDocによる配列要素型の補足
 
-重点:
+TypeScript / Go経験者向けの注意:
 
-- Migration
-- Factory / Seeder
-- Eloquent Model
-- Relationship
-- Scope
-- Casts
-- Accessor / Mutator
-- N+1問題と eager loading
-- Transaction
+- PHPの配列は、list、map、object-like dataの役割が混ざる
+- 配列の形は型だけでは表現しきれないことが多い
+- PHPDocや静的解析で補う文化がある
 
-成果物:
+完了条件:
 
-- `shipments`
-- `shipment_events`
-- `warehouses`
-- `carriers`
-- `delivery_routes`
+- 配列の一覧をループして集計できる
+- 関数の引数と戻り値に型を書ける
+- 連想配列の便利さと危うさを説明できる
+
+### Phase 3: クラスとオブジェクト
+
+目的:
+
+Laravelへ進む前に、PHPのクラス構文を理解する。
+
+扱うこと:
+
+- `class`
+- constructor
+- property
+- method
+- visibility: `public`, `private`, `protected`
+- `readonly`
+- `DateTimeImmutable`
+- 例外
+- enum
+
+この段階から、物流ドメインの題材を少し使う。
 
 題材:
 
-- 出荷は複数の配送イベントを持つ
-- 配送イベントには `accepted`, `in_transit`, `arrived_at_hub`, `out_for_delivery`, `delivered`, `failed` がある
-- 出荷の現在ステータスは最新イベントから導出する
-- 遅延判定は納品予定日時と現在イベントから判断する
+- Shipment
+- ShipmentEvent
+- ShipmentStatus
 
-### 4. Laravelらしいアプリケーション設計を知る
+完了条件:
 
-重点:
+- Goのstruct + methodとPHP classの違いを説明できる
+- TypeScript classとの近さと違いを説明できる
+- enumで状態を表現できる
+- mutableな日時とimmutableな日時の違いを説明できる
+
+### Phase 4: Composerとautoload
+
+目的:
+
+複数ファイルのPHPアプリケーションを、実務的な形で読み書きできるようにする。
+
+扱うこと:
+
+- Composer
+- `composer.json`
+- dependency
+- autoload
+- PSR-4
+- namespace
+- `use`
+- dev dependency
+- script
+
+完了条件:
+
+- `require` の手動読み込みとautoloadの違いを説明できる
+- namespaceがファイルパスとどう対応するか説明できる
+- Composerで依存ライブラリを入れる意味を説明できる
+
+### Phase 5: テストと品質ツール
+
+目的:
+
+PHPコードを安全に変えられる状態を作る。
+
+扱うこと:
+
+- PHPUnit or Pest
+- assertion
+- arrange / act / assert
+- PHPStan
+- Laravel Pint
+- 静的解析とフォーマットの役割
+
+完了条件:
+
+- 小さな関数やクラスにテストを書ける
+- テスト失敗のメッセージを読める
+- 型エラーとテスト失敗の違いを説明できる
+
+### Phase 6: Laravelの入口
+
+目的:
+
+PHPの基礎を踏まえて、Laravelの規約を理解する。
+
+扱うこと:
+
+- Laravelプロジェクト作成
+- `php artisan`
+- routing
+- request lifecycle
+- Controller
+- Request / Response
+- config / env
+- service containerの入口
+
+完了条件:
+
+- ブラウザまたはHTTPクライアントからLaravelのRouteを呼べる
+- Controllerが呼ばれる流れを説明できる
+- PHPの仕組みとLaravelの仕組みを分けて説明できる
+
+### Phase 7: LaravelでDBを扱う
+
+目的:
+
+Laravel実務で頻出するDB中心の実装を学ぶ。
+
+扱うこと:
+
+- Migration
+- Model
+- Eloquent
+- Query Builder
+- Factory
+- Seeder
+- Relationship
+- N+1
+- transaction
+
+物流題材:
+
+- shipments
+- shipment_events
+- carriers
+- warehouses
+
+完了条件:
+
+- Migrationでテーブルを作れる
+- Eloquent ModelでCRUDできる
+- relationshipを使って関連データを取得できる
+- N+1問題を説明できる
+
+### Phase 8: Laravelと設計
+
+目的:
+
+Laravelらしい実装とDDD寄りの設計の折り合いを理解する。
+
+扱うこと:
 
 - Fat Controllerを避ける
-- Form Request / Action / Service / Job の分担
-- Policyで認可を外出しする
-- Event / Listenerで副作用を分離する
-- Queueで外部連携や重い処理を逃がす
-
-DDDとの折り合い:
-
-- Eloquentをそのままドメインモデルにすると速いが、複雑な業務ルールは散らばりやすい
-- 最初は `app/Actions` や `app/Services` にユースケースを寄せる
-- 集約・値オブジェクト・ドメインサービスは、複雑さが出た場所から局所的に導入する
-- RepositoryはLaravelでは過剰になりがち。DB差し替え目的ではなく、複雑な問い合わせや永続化境界を明確にしたい時に限定する
-
-### 5. 実務寄りの周辺機能を触る
-
-重点:
-
-- Queue / Job
+- Form Request
+- Action / Service
+- Policy
+- Event / Listener
+- Job / Queue
 - Schedule
-- Notification / Mail
-- File Storage
-- Cache / Redis
-- Logging
-- Error handling
-- Deployment時の config cache / route cache
+- Notification
+- Eloquent Modelとドメインモデルの違い
 
-成果物:
+DDDとの関係:
 
-- 配送ステータス更新CSVを取り込むJob
-- 遅延出荷を検知するSchedule
-- 遅延通知をNotificationとして実装
-- 取り込み失敗時のログとリトライ
-
-## 4週間プラン
-
-### Week 1: PHPとLaravelの入口
-
-やること:
-
-- PHPの基本構文をGo/TSとの差分で押さえる
-- Composerとautoloadを理解する
-- Laravelプロジェクトを作る
-- ルーティング、Controller、Request、Responseを触る
-- Feature Testを1本書く
+- EloquentはActive Recordであり、永続化と振る舞いが近い
+- 小さい機能ではEloquent中心が実務的に速い
+- 複雑な業務ルールはAction、Service、Value Objectへ逃がす余地がある
+- Repositoryは常に必要ではない
+- 境界を増やす前に、どのルールを守りたいのかを明確にする
 
 完了条件:
 
-- GET / POST / PATCH / DELETE のAPIを自分で追加できる
-- `php artisan` の基本コマンドを使える
-- バリデーション失敗時のレスポンスをテストできる
+- Controller、Model、Action、Jobの責務を説明できる
+- 物流ドメインのルールをテストで表現できる
+- DDD用語をLaravelコードへ機械的に当てはめない判断ができる
 
-### Week 2: EloquentとDB
+## 最初の7日間
 
-やること:
+### Day 1: PHPを実行する、値と型を見る
 
-- Migrationで物流ドメインのテーブルを作る
-- ModelとRelationshipを定義する
-- Factory / Seederでテストデータを作る
-- N+1を意図的に起こして、eager loadingで直す
+ゴール:
 
-完了条件:
+- `php hello.php` を実行できる
+- `echo`, `var_dump`, `gettype` を使える
+- PHPの変数が `$name` の形だと理解する
+- 暗黙の型変換を観察する
 
-- 複数テーブルをまたぐ一覧APIを作れる
-- Relationshipの向きと外部キーを説明できる
-- DBテストで主要なCRUDを保護できる
+扱わないこと:
 
-### Week 3: 業務ロジックとDDD寄り設計
+- class
+- enum
+- Composer
+- Laravel
+- DDD
 
-やること:
+### Day 2: `strict_types` と関数
 
-- 出荷ステータス更新のユースケースを実装する
-- 値オブジェクト候補を見つける
-- Policyで認可を分離する
-- Event / Listenerで配送完了時の副作用を分ける
+ゴール:
 
-完了条件:
+- 関数を定義できる
+- 引数型と戻り値型を書ける
+- `declare(strict_types=1);` の意味を説明できる
+- TypeErrorを読める
 
-- Controllerから業務ロジックを追い出せる
-- Eloquent Modelに置く処理とAction/Serviceに置く処理を判断できる
-- ドメインルールをテストで表現できる
+### Day 3: 条件分岐とループ
 
-### Week 4: 非同期処理・運用目線・総仕上げ
+ゴール:
 
-やること:
+- `if`
+- `match`
+- `for`
+- `foreach`
+- 真偽値の扱い
+- 比較演算子
 
-- CSV取り込みJobを作る
-- Queue workerを動かす
-- Scheduleで遅延検知する
-- ログ、リトライ、失敗時の扱いを入れる
-- READMEに設計メモを書く
+### Day 4: 配列と連想配列
 
-完了条件:
+ゴール:
 
-- Queue / Scheduleを使う理由を説明できる
-- 失敗する外部入力をテストできる
-- 小さな物流アプリとして一通りデモできる
+- listとしての配列
+- mapとしての配列
+- 連想配列
+- 配列の形が崩れる危険性
+- PHPDocで配列要素を補足する理由
 
-## 日々の進め方
+### Day 5: 関数に分ける
 
-1日60〜90分を想定。
+ゴール:
 
-- 10分: 前回の復習、今日のゴールを1つ決める
-- 40〜60分: 実装
-- 10〜20分: テスト、リファクタ、学びのメモ
+- 小さな処理を関数へ分ける
+- nullable型を使う
+- 例外を軽く見る
+- テストしやすい形を意識する
 
-毎回残すメモ:
+### Day 6: クラスの入口
 
-- 今日触ったLaravel機能
-- Go / TS と比べて違和感があった点
-- 実務で事故りそうな点
-- DDD的にどこがドメイン知識だったか
+ゴール:
 
-## Codexでのサポート方針
+- class
+- property
+- constructor
+- method
+- visibility
 
-このワークスペースでは、以下の形で学習を進める。
+### Day 7: 小さな復習課題
 
-- 小さな課題を出す
-- 実装してもらったコードをレビューする
-- Laravelの慣用的な書き方に直す
-- Go / TS との比較で説明する
-- 物流ドメインのモデリングを一緒に詰める
-- テスト観点を追加する
-- 必要に応じて公式ドキュメントの該当箇所に戻る
+ゴール:
 
-おすすめの依頼例:
+- 1週間分の構文を使って小さなCLIプログラムを書く
+- 物流ドメインはまだ軽く扱う
+- レビューを受けて、PHPとして読みやすい形に直す
 
-- `Week 1 Day 1の課題を出して`
-- `このPHPコードをレビューして`
-- `Laravelらしい書き方に直して`
-- `EloquentのrelationshipをGoの構造体設計と比較して説明して`
-- `この物流ドメインをDDD観点でモデリングして`
-- `次に書くべきテストを考えて`
+## Day 1の正しい課題
+
+`hello.php` に、まず以下のような小さなコードを書く。
+
+```php
+<?php
+
+$name = 'Wakabayashi';
+$years = 10;
+
+echo "Hello, {$name}\n";
+echo "Experience: {$years} years\n";
+
+var_dump($name);
+var_dump($years);
+var_dump($years + '5');
+var_dump(gettype($years));
+```
+
+実行する。
+
+```bash
+php hello.php
+```
+
+観察すること:
+
+- `echo` は何を出力するか
+- `var_dump` は値と型をどう表示するか
+- `$years + '5'` がなぜ計算できるのか
+- `gettype($years)` は何を返すか
+
+この時点では `declare(strict_types=1);` は書かない。まずPHPのデフォルト挙動を観察する。
+
+## 学習ログの残し方
+
+各回、短くてよいので `notes/` にメモを残す。
+
+例:
+
+```text
+notes/
+  day-01.md
+  day-02.md
+```
+
+書くこと:
+
+- 今日わかったこと
+- まだ曖昧なこと
+- Go / TypeScriptと違うと感じたこと
+- 次に確認したいこと
 
 ## 参照する公式ドキュメント
 
+- PHP manual: https://www.php.net/manual/en/
+- PHP types: https://www.php.net/manual/en/language.types.php
+- PHP functions: https://www.php.net/manual/en/language.functions.php
+- PHP classes and objects: https://www.php.net/manual/en/language.oop5.php
+- PHP supported versions: https://www.php.net/supported-versions.php
+- Composer documentation: https://getcomposer.org/doc/
 - Laravel installation: https://laravel.com/docs/13.x/installation
 - Laravel request lifecycle: https://laravel.com/docs/13.x/lifecycle
 - Laravel service container: https://laravel.com/docs/13.x/container
 - Laravel Eloquent: https://laravel.com/docs/13.x/eloquent
-- Laravel relationships: https://laravel.com/docs/13.x/eloquent-relationships
-- Laravel queues: https://laravel.com/docs/13.x/queues
 - Laravel testing: https://laravel.com/docs/13.x/testing
-- PHP supported versions: https://www.php.net/supported-versions.php

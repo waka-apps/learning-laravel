@@ -1,20 +1,35 @@
 <?php
 declare(strict_types=1);
 
-$events = ['accepted', 'in_transit', 'arrived_at_hub'];
+function currentStatus(array $shipment): ?string
+{
+    return $shipment['status'] ?? null;
+}
 
-$shipment = [
+function isDelivered(array $shipment): bool
+{
+    return currentStatus($shipment) === 'delivered';
+}
+
+$shipmentA = [
     'tracking_number' => 'SHP-001',
     'status' => 'in_transit',
-    'carrier' => 'yamato',
 ];
 
-echo $events[0] . "\n";
-echo $events[1] . "\n";
+$shipmentB = [
+    'tracking_number' => 'SHP-002',
+    'status' => 'delivered',
+];
 
-echo $shipment['tracking_number'] . "\n";
-echo $shipment['status'] . "\n";
-echo $shipment['dummy'] . "\n";
+$shipmentC = [
+    'tracking_number' => 'SHP-003',
+];
 
-var_dump($events);
-var_dump($shipment);
+var_dump(currentStatus($shipmentA));
+var_dump(isDelivered($shipmentA));
+
+var_dump(currentStatus($shipmentB));
+var_dump(isDelivered($shipmentB));
+
+var_dump(currentStatus($shipmentC));
+var_dump(isDelivered($shipmentC));

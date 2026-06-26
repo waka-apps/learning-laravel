@@ -1,35 +1,30 @@
 <?php
 declare(strict_types=1);
 
-function currentStatus(array $shipment): ?string
+class Shipment
 {
-    return $shipment['status'] ?? null;
+    public string $trackingNumber;
+    public string $status;
+
+    public function __construct(string $trackingNumber, string $status)
+    {
+        $this->trackingNumber = $trackingNumber;
+        $this->status = $status;
+    }
+
+    public function isDelivered(): bool
+    {
+        return $this->status === "delivered";
+    }
 }
 
-function isDelivered(array $shipment): bool
-{
-    return currentStatus($shipment) === 'delivered';
-}
+$shipmentA = new Shipment("SHP-001", "in_transit");
+$shipmentB = new Shipment("SHP-002", "delivered");
 
-$shipmentA = [
-    'tracking_number' => 'SHP-001',
-    'status' => 'in_transit',
-];
+var_dump($shipmentA->trackingNumber);
+var_dump($shipmentA->status);
+var_dump($shipmentA->isDelivered());
 
-$shipmentB = [
-    'tracking_number' => 'SHP-002',
-    'status' => 'delivered',
-];
-
-$shipmentC = [
-    'tracking_number' => 'SHP-003',
-];
-
-var_dump(currentStatus($shipmentA));
-var_dump(isDelivered($shipmentA));
-
-var_dump(currentStatus($shipmentB));
-var_dump(isDelivered($shipmentB));
-
-var_dump(currentStatus($shipmentC));
-var_dump(isDelivered($shipmentC));
+var_dump($shipmentB->trackingNumber);
+var_dump($shipmentB->status);
+var_dump($shipmentB->isDelivered());

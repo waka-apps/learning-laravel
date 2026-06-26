@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 1 - PHPを実行して観察する
 - 現在のレッスン: Day 6 - クラスの入口
-- 状態: not started
-- 次にやること: Day 6 を開始したら、class、property、constructor、method を最小コードで見る
+- 状態: in progress
+- 次にやること: class、property、constructor、method を最小コードで確認する
 
 ## 進め方
 
@@ -50,7 +50,7 @@
 | Day 3 | 条件分岐とループ | done | 2026-06-26 |
 | Day 4 | 配列と連想配列 | done | 2026-06-26 |
 | Day 5 | 関数に分ける | done | 2026-06-26 |
-| Day 6 | クラスの入口 | not started | - |
+| Day 6 | クラスの入口 | in progress | - |
 | Day 7 | 小さな復習課題 | not started | - |
 
 ## Day 1チェックリスト
@@ -97,6 +97,14 @@
 - [x] `null` を返す関数を読める
 - [x] 関数に分けると何が良いかを1つ説明できる
 
+## Day 6チェックリスト
+
+- [ ] `class` を定義できる
+- [ ] property が何か説明できる
+- [ ] constructor が何をするか説明できる
+- [ ] method が何か説明できる
+- [ ] 関数とクラスの使い分けを1つ説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -139,6 +147,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた
+- Day 6 を `in progress` に切り替えた
 
 ## 保留事項
 

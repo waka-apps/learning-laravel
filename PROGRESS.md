@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 1 - PHPを実行して観察する
 - 現在のレッスン: Day 6 - クラスの入口
-- 状態: in progress
-- 次にやること: class、property、constructor、method を最小コードで確認する
+- 状態: review
+- 次にやること: class、property、constructor、method の役割を説明できるようにする
 
 ## 進め方
 
@@ -50,7 +50,7 @@
 | Day 3 | 条件分岐とループ | done | 2026-06-26 |
 | Day 4 | 配列と連想配列 | done | 2026-06-26 |
 | Day 5 | 関数に分ける | done | 2026-06-26 |
-| Day 6 | クラスの入口 | in progress | - |
+| Day 6 | クラスの入口 | review | - |
 | Day 7 | 小さな復習課題 | not started | - |
 
 ## Day 1チェックリスト
@@ -99,10 +99,10 @@
 
 ## Day 6チェックリスト
 
-- [ ] `class` を定義できる
-- [ ] property が何か説明できる
-- [ ] constructor が何をするか説明できる
-- [ ] method が何か説明できる
+- [x] `class` を定義できる
+- [x] property が何か説明できる
+- [x] constructor が何をするか説明できる
+- [x] method が何か説明できる
 - [ ] 関数とクラスの使い分けを1つ説明できる
 
 ## 理解チェック
@@ -148,6 +148,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた
 - Day 6 を `in progress` に切り替えた
+- Day 6 の class / property / constructor / method 実行を確認した
+- Day 6 を `review` に切り替えた
 
 ## 保留事項
 

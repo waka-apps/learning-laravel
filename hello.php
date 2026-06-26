@@ -1,24 +1,20 @@
 <?php
 declare(strict_types=1);
 
-$status = 'in_transit';
 $events = ['accepted', 'in_transit', 'arrived_at_hub'];
 
-if ($status === 'in_transit') {
-    echo "Shipment is moving\n";
-} else {
-    echo "Shipment is not moving\n";
-}
+$shipment = [
+    'tracking_number' => 'SHP-001',
+    'status' => 'in_transit',
+    'carrier' => 'yamato',
+];
 
-$message = match ($status) {
-    'accepted' => 'Accepted',
-    'in_transit' => 'In transit',
-    'arrived_at_hub' => 'Arrived at hub',
-    default => 'Unknown status',
-};
+echo $events[0] . "\n";
+echo $events[1] . "\n";
 
-echo $message . "\n";
+echo $shipment['tracking_number'] . "\n";
+echo $shipment['status'] . "\n";
+echo $shipment['dummy'] . "\n";
 
-foreach ($events as $event) {
-    echo $event . "\n";
-}
+var_dump($events);
+var_dump($shipment);

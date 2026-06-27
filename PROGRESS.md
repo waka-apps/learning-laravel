@@ -4,10 +4,10 @@
 
 ## 現在地
 
-- 現在のフェーズ: Phase 1 - PHPを実行して観察する
-- 現在のレッスン: Day 7 - 小さな復習課題
-- 状態: done
-- 次にやること: Week 1 完了。次回は visibility、readonly、例外、namespace などPHP基礎を継続するか、Laravel入口へ進むかを決める
+- 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
+- 現在のレッスン: P2-01 - visibility とカプセル化
+- 状態: not started
+- 次にやること: `public`, `private`, getter, 状態変更methodを最小コードで確認する
 
 ## 進め方
 
@@ -33,13 +33,11 @@
 | Phase | 内容 | 状態 |
 | --- | --- | --- |
 | Phase 1 | PHPを実行して観察する | done |
-| Phase 2 | 関数と配列 | not started |
-| Phase 3 | クラスとオブジェクト | not started |
-| Phase 4 | Composerとautoload | not started |
-| Phase 5 | テストと品質ツール | not started |
-| Phase 6 | Laravelの入口 | not started |
-| Phase 7 | LaravelでDBを扱う | not started |
-| Phase 8 | Laravelと設計 | not started |
+| Phase 2 | Laravel前のPHP最小セット | not started |
+| Phase 3 | Laravelの入口 | not started |
+| Phase 4 | Laravel DB / Eloquent | not started |
+| Phase 5 | Laravel testing / quality | not started |
+| Phase 6 | Laravel設計と物流ドメイン | not started |
 
 ## 最初の7日間
 
@@ -113,6 +111,18 @@
 - [x] `match` または `if` を適切に使える
 - [x] これまでの内容を組み合わせて1つの小さなCLIプログラムにできる
 
+## Phase 2チェックリスト
+
+- [ ] visibility とカプセル化を説明できる
+- [ ] constructor property promotion を読める
+- [ ] `readonly` を使う場面を説明できる
+- [ ] enumでstatusを表現できる
+- [ ] exception と `null` の使い分けを説明できる
+- [ ] namespace / `use` を読める
+- [ ] Composer autoloadで複数ファイルを実行できる
+- [ ] PHPDocで配列要素型を補足できる
+- [ ] DateTimeImmutable または Carbon の入口を理解できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -162,6 +172,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 7 を `in progress` に切り替えた
 - Day 7 の復習課題実行を確認した
 - Day 7 を `done` に切り替えた
+- Week 1完了後の見直しを行い、Laravel前にPhase 2としてPHP最小セットを挟む方針に更新した
 
 ## 保留事項
 

@@ -53,6 +53,182 @@ Codexは、以下のルールで学習をサポートする。
 - Eloquentの便利さと危険な点を理解できる
 - LaravelのActive Record寄りの設計とDDD寄りの設計の違いを説明できる
 
+## 2026-06-27時点の見直し
+
+Week 1で、PHPの本当に基本的な構文をCLIで観察した。到達点は以下。
+
+- PHPファイルをCLI実行できる
+- `echo`, `var_dump`, `gettype` で観察できる
+- 暗黙の型変換と `strict_types` の入口を説明できる
+- `if`, `match`, `foreach` を読める
+- list と連想配列の違いを説明できる
+- 関数へ処理を分けられる
+- class, property, constructor, method の入口を理解した
+
+一方で、Laravelへ進むにはPHP知識がまだ薄い。特に、Laravelのコードを読む前に以下を固める必要がある。
+
+- visibility: `public`, `private`, `protected`
+- constructor property promotion
+- `readonly`
+- enum
+- exception
+- namespace / `use`
+- Composer / autoload / PSR-4
+- PHPDoc と配列の型表現
+- static analysis の考え方
+- DateTime / Carbon の入口
+
+したがって、次はLaravelへ直接入らず、`Laravel前のPHP最小セット` を1フェーズ挟む。
+
+## 次の推奨プラン
+
+### Phase 2: Laravel前のPHP最小セット
+
+目的:
+
+LaravelのController、Request、Model、Service、Jobを読んだときに、PHP構文で止まらない状態を作る。
+
+扱うこと:
+
+- visibility
+- constructor property promotion
+- `readonly`
+- enum
+- exception
+- namespace / `use`
+- Composer / autoload
+- PHPDoc
+- DateTimeImmutable と Carbon の入口
+
+完了条件:
+
+- `private` property と public method の関係を説明できる
+- enumで状態を表現できる
+- 例外を投げる場面と `null` を返す場面を区別できる
+- 複数ファイルに分けたPHPコードをautoloadで実行できる
+- Laravelのクラスファイルを見て、namespaceとuseで迷わない
+
+### Phase 2のレッスン案
+
+#### P2-01: visibility とカプセル化
+
+- `public` property を直接触る危うさ
+- `private` property
+- getter method
+- 状態変更用 method
+
+#### P2-02: constructor property promotion と readonly
+
+- 長い constructor の省略形
+- object生成後に変えない値
+- tracking number のような識別子をどう扱うか
+
+#### P2-03: enum
+
+- 文字列statusの危うさ
+- `ShipmentStatus` enum
+- `match` と enum の組み合わせ
+
+#### P2-04: exception と null
+
+- `null` を返す関数
+- `throw new RuntimeException(...)`
+- 見つからない、壊れている、許可されない、の違い
+
+#### P2-05: 複数ファイル化
+
+- `require`
+- ファイル分割
+- classごとにファイルを分ける
+- 手動読み込みの限界
+
+#### P2-06: Composer と autoload
+
+- `composer.json`
+- PSR-4
+- `vendor/autoload.php`
+- namespace / `use`
+
+#### P2-07: PHPDoc と配列型
+
+- `Shipment[]`
+- `array<string, mixed>`
+- array shape
+- 静的解析がなぜ必要になるか
+
+#### P2-08: 日時
+
+- `DateTimeImmutable`
+- Carbonの入口
+- ETAやdeliveredAtの表現
+
+#### P2-09: 小さな復習課題
+
+- 複数ファイル
+- enum
+- private property
+- readonly
+- exception
+- autoload
+
+### Phase 3: Laravel入口
+
+Phase 2完了後にLaravelへ入る。
+
+扱うこと:
+
+- Laravelプロジェクト作成
+- `php artisan`
+- routing
+- request lifecycle
+- Controller
+- Request / Response
+- config / env
+- service containerの入口
+
+完了条件:
+
+- RouteからControllerが呼ばれる流れを説明できる
+- PHPの仕組みとLaravelの規約を分けて説明できる
+- JSON APIを1つ作れる
+
+### Phase 4: Laravel DB / Eloquent
+
+扱うこと:
+
+- Migration
+- Eloquent Model
+- Factory / Seeder
+- Relationship
+- N+1
+- transaction
+
+### Phase 5: Laravel testing / quality
+
+扱うこと:
+
+- PHPUnit or Pest
+- Feature Test
+- Unit Test
+- Pint
+- PHPStan or Larastan
+
+### Phase 6: Laravel設計と物流ドメイン
+
+扱うこと:
+
+- Form Request
+- Action / Service
+- Policy
+- Event / Listener
+- Job / Queue
+- Schedule
+- Eloquent Modelとドメインモデルの違い
+
+判断:
+
+Laravelに早く入ることより、Laravelコードを読んだときにPHP構文・autoload・namespace・例外・型で止まらないことを優先する。現時点では、Phase 2を挟むのが最も効率が良い。
+
 ## フェーズ構成
 
 ### Phase 1: PHPを実行して観察する

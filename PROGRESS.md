@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-01 - visibility とカプセル化
-- 状態: not started
+- 状態: in progress
 - 次にやること: `public`, `private`, getter, 状態変更methodを最小コードで確認する
 
 ## 進め方
@@ -33,7 +33,7 @@
 | Phase | 内容 | 状態 |
 | --- | --- | --- |
 | Phase 1 | PHPを実行して観察する | done |
-| Phase 2 | Laravel前のPHP最小セット | not started |
+| Phase 2 | Laravel前のPHP最小セット | in progress |
 | Phase 3 | Laravelの入口 | not started |
 | Phase 4 | Laravel DB / Eloquent | not started |
 | Phase 5 | Laravel testing / quality | not started |
@@ -123,6 +123,14 @@
 - [ ] PHPDocで配列要素型を補足できる
 - [ ] DateTimeImmutable または Carbon の入口を理解できる
 
+## P2-01チェックリスト
+
+- [ ] `public` property を外から触れることを確認した
+- [ ] `private` property を外から直接触れないことを確認した
+- [ ] getter method の役割を説明できる
+- [ ] 状態変更methodで更新する利点を説明できる
+- [ ] カプセル化が必要な理由を1つ説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -173,6 +181,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 7 の復習課題実行を確認した
 - Day 7 を `done` に切り替えた
 - Week 1完了後の見直しを行い、Laravel前にPhase 2としてPHP最小セットを挟む方針に更新した
+- Phase 2 を `in progress` に切り替えた
+- P2-01 を `in progress` に切り替えた
 
 ## 保留事項
 

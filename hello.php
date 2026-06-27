@@ -12,19 +12,30 @@ class Shipment
         $this->status = $status;
     }
 
+    public function label(): string
+    {
+        return match ($this->status) {
+            "accepted" => "Accepted",
+            "in_transit" => "In transit",
+            "delivered" => "Delivered",
+            default => "Unknown",
+        };
+    }
+
     public function isDelivered(): bool
     {
         return $this->status === "delivered";
     }
 }
 
-$shipmentA = new Shipment("SHP-001", "in_transit");
-$shipmentB = new Shipment("SHP-002", "delivered");
+$shipments = [
+    new Shipment("SHP-001", "accepted"),
+    new Shipment("SHP-002", "in_transit"),
+    new Shipment("SHP-003", "delivered"),
+];
 
-var_dump($shipmentA->trackingNumber);
-var_dump($shipmentA->status);
-var_dump($shipmentA->isDelivered());
-
-var_dump($shipmentB->trackingNumber);
-var_dump($shipmentB->status);
-var_dump($shipmentB->isDelivered());
+foreach ($shipments as $shipment) {
+    echo $shipment->trackingNumber . "\n";
+    echo $shipment->label() . "\n";
+    echo ($shipment->isDelivered() ? "yes" : "no") . "\n";
+}

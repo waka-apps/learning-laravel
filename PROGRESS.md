@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-01 - visibility とカプセル化
-- 状態: in progress
+- 状態: review
 - 次にやること: `public`, `private`, getter, 状態変更methodを最小コードで確認する
 
 ## 進め方
@@ -125,10 +125,10 @@
 
 ## P2-01チェックリスト
 
-- [ ] `public` property を外から触れることを確認した
+- [x] `public` property を外から触れることを確認した
 - [ ] `private` property を外から直接触れないことを確認した
-- [ ] getter method の役割を説明できる
-- [ ] 状態変更methodで更新する利点を説明できる
+- [x] getter method の役割を説明できる
+- [x] 状態変更methodで更新する利点を説明できる
 - [ ] カプセル化が必要な理由を1つ説明できる
 
 ## 理解チェック
@@ -183,6 +183,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Week 1完了後の見直しを行い、Laravel前にPhase 2としてPHP最小セットを挟む方針に更新した
 - Phase 2 を `in progress` に切り替えた
 - P2-01 を `in progress` に切り替えた
+- P2-01 の `public` / `private` の初回実行を確認した
+- P2-01 を `review` に切り替えた
 
 ## 保留事項
 

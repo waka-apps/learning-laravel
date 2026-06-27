@@ -126,7 +126,7 @@
 ## P2-01チェックリスト
 
 - [x] `public` property を外から触れることを確認した
-- [ ] `private` property を外から直接触れないことを確認した
+- [x] `private` property を外から直接触れないことを確認した
 - [x] getter method の役割を説明できる
 - [x] 状態変更methodで更新する利点を説明できる
 - [ ] カプセル化が必要な理由を1つ説明できる
@@ -185,6 +185,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-01 を `in progress` に切り替えた
 - P2-01 の `public` / `private` の初回実行を確認した
 - P2-01 を `review` に切り替えた
+- P2-01 で `private` property への直接アクセスエラーを確認した
 
 ## 保留事項
 

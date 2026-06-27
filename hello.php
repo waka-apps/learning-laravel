@@ -4,7 +4,7 @@ declare(strict_types=1);
 class Shipment
 {
     public string $trackingNumber;
-    public string $status;
+    private string $status;
 
     public function __construct(string $trackingNumber, string $status)
     {
@@ -12,30 +12,22 @@ class Shipment
         $this->status = $status;
     }
 
-    public function label(): string
+    public function status(): string
     {
-        return match ($this->status) {
-            "accepted" => "Accepted",
-            "in_transit" => "In transit",
-            "delivered" => "Delivered",
-            default => "Unknown",
-        };
+        return $this->status;
     }
 
-    public function isDelivered(): bool
+    public function markDelivered(): void
     {
-        return $this->status === "delivered";
+        $this->status = "delivered";
     }
 }
 
-$shipments = [
-    new Shipment("SHP-001", "accepted"),
-    new Shipment("SHP-002", "in_transit"),
-    new Shipment("SHP-003", "delivered"),
-];
+$shipment = new Shipment("SHP-001", "in_transit");
 
-foreach ($shipments as $shipment) {
-    echo $shipment->trackingNumber . "\n";
-    echo $shipment->label() . "\n";
-    echo ($shipment->isDelivered() ? "yes" : "no") . "\n";
-}
+var_dump($shipment->trackingNumber);
+var_dump($shipment->status());
+
+$shipment->markDelivered();
+
+var_dump($shipment->status());

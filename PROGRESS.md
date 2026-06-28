@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-02 - constructor property promotion と readonly
-- 状態: done
-- 次にやること: P2-03 - enumで状態を表現する準備をする
+- 現在のレッスン: P2-03 - enumでstatusを表現する
+- 状態: in progress
+- 次にやること: string の status を enum に置き換える
 
 ## 進め方
 
@@ -139,6 +139,14 @@
 - [x] `readonly` を変更しようとした時のエラーを確認した
 - [x] tracking number のような識別子に `readonly` が向く理由を説明できる
 
+## P2-03チェックリスト
+
+- [ ] enum を定義できる
+- [ ] `case` で取りうる値を列挙できる
+- [ ] `string` の status より enum の方が安全な理由を説明できる
+- [ ] class の property 型として enum を使える
+- [ ] enum を `match` と組み合わせて読める
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -201,6 +209,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-02 で `readonly` property への再代入エラーを確認した
 - P2-02 で `readonly` が識別子の不変条件を守る用途に向くと説明できた
 - P2-02 を `done` に切り替えた
+- P2-03 を `in progress` に切り替えた
 
 ## 保留事項
 

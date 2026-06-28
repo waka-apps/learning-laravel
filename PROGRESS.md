@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-02 - constructor property promotion と readonly
-- 状態: review
-- 次にやること: constructor property promotion と `readonly` を最小コードで確認する
+- 状態: done
+- 次にやること: P2-03 - enumで状態を表現する準備をする
 
 ## 進め方
 
@@ -114,8 +114,8 @@
 ## Phase 2チェックリスト
 
 - [x] visibility とカプセル化を説明できる
-- [ ] constructor property promotion を読める
-- [ ] `readonly` を使う場面を説明できる
+- [x] constructor property promotion を読める
+- [x] `readonly` を使う場面を説明できる
 - [ ] enumでstatusを表現できる
 - [ ] exception と `null` の使い分けを説明できる
 - [ ] namespace / `use` を読める
@@ -137,7 +137,7 @@
 - [x] promotion で何が省略されるか説明できる
 - [x] `readonly` property の意味を説明できる
 - [x] `readonly` を変更しようとした時のエラーを確認した
-- [ ] tracking number のような識別子に `readonly` が向く理由を説明できる
+- [x] tracking number のような識別子に `readonly` が向く理由を説明できる
 
 ## 理解チェック
 
@@ -199,6 +199,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-02 の constructor property promotion / readonly の初回実行を確認した
 - P2-02 を `review` に切り替えた
 - P2-02 で `readonly` property への再代入エラーを確認した
+- P2-02 で `readonly` が識別子の不変条件を守る用途に向くと説明できた
+- P2-02 を `done` に切り替えた
 
 ## 保留事項
 

@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-02 - constructor property promotion と readonly
-- 状態: in progress
+- 状態: review
 - 次にやること: constructor property promotion と `readonly` を最小コードで確認する
 
 ## 進め方
@@ -133,9 +133,9 @@
 
 ## P2-02チェックリスト
 
-- [ ] constructor property promotion を読める
-- [ ] promotion で何が省略されるか説明できる
-- [ ] `readonly` property の意味を説明できる
+- [x] constructor property promotion を読める
+- [x] promotion で何が省略されるか説明できる
+- [x] `readonly` property の意味を説明できる
 - [ ] `readonly` を変更しようとした時のエラーを確認した
 - [ ] tracking number のような識別子に `readonly` が向く理由を説明できる
 
@@ -196,6 +196,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-01 で `private` property への直接アクセスエラーを確認した
 - P2-01 を `done` に切り替えた
 - P2-02 を `in progress` に切り替えた
+- P2-02 の constructor property promotion / readonly の初回実行を確認した
+- P2-02 を `review` に切り替えた
 
 ## 保留事項
 

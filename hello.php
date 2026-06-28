@@ -3,14 +3,10 @@ declare(strict_types=1);
 
 class Shipment
 {
-    public string $trackingNumber;
-    private string $status;
-
-    public function __construct(string $trackingNumber, string $status)
-    {
-        $this->trackingNumber = $trackingNumber;
-        $this->status = $status;
-    }
+    public function __construct(
+        public readonly string $trackingNumber,
+        private string $status,
+    ) {}
 
     public function status(): string
     {

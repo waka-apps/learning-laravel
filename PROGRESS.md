@@ -136,7 +136,7 @@
 - [x] constructor property promotion を読める
 - [x] promotion で何が省略されるか説明できる
 - [x] `readonly` property の意味を説明できる
-- [ ] `readonly` を変更しようとした時のエラーを確認した
+- [x] `readonly` を変更しようとした時のエラーを確認した
 - [ ] tracking number のような識別子に `readonly` が向く理由を説明できる
 
 ## 理解チェック
@@ -198,6 +198,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-02 を `in progress` に切り替えた
 - P2-02 の constructor property promotion / readonly の初回実行を確認した
 - P2-02 を `review` に切り替えた
+- P2-02 で `readonly` property への再代入エラーを確認した
 
 ## 保留事項
 

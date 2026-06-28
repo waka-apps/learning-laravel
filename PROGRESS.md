@@ -143,7 +143,7 @@
 
 - [x] enum を定義できる
 - [x] `case` で取りうる値を列挙できる
-- [ ] `string` の status より enum の方が安全な理由を説明できる
+- [x] `string` の status より enum の方が安全な理由を説明できる
 - [x] class の property 型として enum を使える
 - [ ] enum を `match` と組み合わせて読める
 
@@ -212,6 +212,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-03 を `in progress` に切り替えた
 - P2-03 で enum を導入し、status を string から enum に置き換えた
 - P2-03 を `review` に切り替えた
+- P2-03 で enum が不正な文字列を防ぎ、`ShipmentStatus::InTransit` を enum の値として読めると確認した
 
 ## 保留事項
 

@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-03 - enumでstatusを表現する
-- 状態: review
-- 次にやること: string の status を enum に置き換える
+- 状態: done
+- 次にやること: P2-04 - exception と `null` の使い分けに進む
 
 ## 進め方
 
@@ -116,7 +116,7 @@
 - [x] visibility とカプセル化を説明できる
 - [x] constructor property promotion を読める
 - [x] `readonly` を使う場面を説明できる
-- [ ] enumでstatusを表現できる
+- [x] enumでstatusを表現できる
 - [ ] exception と `null` の使い分けを説明できる
 - [ ] namespace / `use` を読める
 - [ ] Composer autoloadで複数ファイルを実行できる
@@ -214,6 +214,9 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-03 を `review` に切り替えた
 - P2-03 で enum が不正な文字列を防ぎ、`ShipmentStatus::InTransit` を enum の値として読めると確認した
 - P2-03 で enum を `match` と組み合わせ、内部値と表示ラベルを分けて扱えると確認した
+- P2-03 で `status()` と `statusLabel()` の役割の違いを説明できた
+- P2-03 で enum は想定外の値を入りにくくし、`match` の網羅漏れは実行時エラーで検知できると整理した
+- P2-03 を `done` に切り替えた
 
 ## 保留事項
 

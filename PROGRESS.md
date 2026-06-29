@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-04 - exception と `null` の使い分け
-- 状態: review
-- 次にやること: 見つからない shipment を `null` と exception で比較する
+- 状態: done
+- 次にやること: P2-05 - namespace / use に進む
 
 ## 進め方
 
@@ -117,7 +117,7 @@
 - [x] constructor property promotion を読める
 - [x] `readonly` を使う場面を説明できる
 - [x] enumでstatusを表現できる
-- [ ] exception と `null` の使い分けを説明できる
+- [x] exception と `null` の使い分けを説明できる
 - [ ] namespace / `use` を読める
 - [ ] Composer autoloadで複数ファイルを実行できる
 - [ ] PHPDocで配列要素型を補足できる
@@ -149,10 +149,10 @@
 
 ## P2-04チェックリスト
 
-- [ ] `?Shipment` の意味を説明できる
+- [x] `?Shipment` の意味を説明できる
 - [x] 見つからない時に `null` を返す関数を書ける
 - [x] `throw new Exception(...)` を読める
-- [ ] 見つからないことが「普通」か「異常」かで `null` と exception を使い分けられる
+- [x] 見つからないことが「普通」か「異常」かで `null` と exception を使い分けられる
 - [x] `try` / `catch` の基本形を読める
 
 ## 理解チェック
@@ -228,6 +228,9 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-04 を `in progress` に切り替えた
 - P2-04 で `findShipment()` による `null` 戻りと `requireShipment()` による exception を比較した
 - P2-04 を `review` に切り替えた
+- P2-04 で `?Shipment` は `Shipment | null` を表す戻り値型だと整理した
+- P2-04 で「見つからないのが普通なら null、異常なら exception」と使い分けを説明できた
+- P2-04 を `done` に切り替えた
 
 ## 保留事項
 

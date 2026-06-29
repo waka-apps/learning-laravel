@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-04 - exception と `null` の使い分け
-- 状態: in progress
+- 状態: review
 - 次にやること: 見つからない shipment を `null` と exception で比較する
 
 ## 進め方
@@ -150,10 +150,10 @@
 ## P2-04チェックリスト
 
 - [ ] `?Shipment` の意味を説明できる
-- [ ] 見つからない時に `null` を返す関数を書ける
-- [ ] `throw new Exception(...)` を読める
+- [x] 見つからない時に `null` を返す関数を書ける
+- [x] `throw new Exception(...)` を読める
 - [ ] 見つからないことが「普通」か「異常」かで `null` と exception を使い分けられる
-- [ ] `try` / `catch` の基本形を読める
+- [x] `try` / `catch` の基本形を読める
 
 ## 理解チェック
 
@@ -226,6 +226,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-03 で enum は想定外の値を入りにくくし、`match` の網羅漏れは実行時エラーで検知できると整理した
 - P2-03 を `done` に切り替えた
 - P2-04 を `in progress` に切り替えた
+- P2-04 で `findShipment()` による `null` 戻りと `requireShipment()` による exception を比較した
+- P2-04 を `review` に切り替えた
 
 ## 保留事項
 

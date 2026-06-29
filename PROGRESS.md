@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-09 - 小さな復習課題
-- 状態: in progress
-- 次にやること: enum / private / readonly / exception / DateTimeImmutable を組み合わせた小さな CLI 課題に取り組む
+- 状態: review
+- 次にやること: P2-09 の理解をジャーナルにまとめ、Phase 2 完了判定に進む
 
 ## 進め方
 
@@ -248,6 +248,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-09 を `in progress` に切り替えた
 - 課題設計では既存資産を優先して再利用する運用を `LEARNING_PLAN.md` に追記した
 - 完了済みの理解確認を再度そのまま聞かないよう、`PROGRESS.md` を再質問防止にも使う運用を `LEARNING_PLAN.md` に追記した
+- `Shipment` と `hello.php` を使った Phase 2 の統合課題を実行し、P2-09 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

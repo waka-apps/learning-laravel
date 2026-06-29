@@ -246,6 +246,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `hello.php` で immutable / mutable の比較関数を書き、P2-08 を完了にした
 - 次のレッスンを P2-09 に設定した
 - P2-09 を `in progress` に切り替えた
+- 課題設計では既存資産を優先して再利用する運用を `LEARNING_PLAN.md` に追記した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

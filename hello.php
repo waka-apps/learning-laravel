@@ -1,27 +1,62 @@
 <?php
 declare(strict_types=1);
 
-function estimateArrivalImmutable(
-    DateTimeImmutable $shippedAt,
-): DateTimeImmutable {
-    return $shippedAt->modify("+2 days");
-}
+require_once __DIR__ . "/vendor/autoload.php";
 
-function estimateArrival(DateTime $shippedAt): DateTime
+use App\Domain\Shipment\Shipment;
+use App\Domain\Shipment\ShipmentStatus;
+
+/**
+ * @param list<Shipment> $shipments
+ */
+function findShipment(array $shipments, string $trackingNumber): ?Shipment
 {
-    return $shippedAt->modify("+2 days");
+    foreach ($shipments as $shipment) {
+        if ($shipment->trackingNumber === $trackingNumber) {
+            return $shipment;
+        }
+    }
+
+    return null;
 }
 
-$shippedAt = new DateTimeImmutable("2026-06-29T09:00:00+09:00");
-$estimatedArrivalAt = estimateArrivalImmutable($shippedAt);
+/**
+ * @param list<Shipment> $shipments
+ */
+function requireShipment(array $shipments, string $trackingNumber): Shipment
+{
+    $shipment = findShipment($shipments, $trackingNumber);
 
-echo "Immutable\n";
-var_dump($shippedAt->format(DATE_ATOM));
-var_dump($estimatedArrivalAt->format(DATE_ATOM));
+    if ($shipment === null) {
+        throw new Exception("Shipment not found: {$trackingNumber}");
+    }
 
-$mutableShippedAt = new DateTime("2026-06-29T09:00:00+09:00");
-$mutableEstimatedArrivalAt = estimateArrival($mutableShippedAt);
+    return $shipment;
+}
 
-echo "Mutable\n";
-var_dump($mutableShippedAt->format(DATE_ATOM));
-var_dump($mutableEstimatedArrivalAt->format(DATE_ATOM));
+$shipment1 = new Shipment("SHP-001", ShipmentStatus::InTransit);
+$shipment2 = new Shipment("SHP-002", ShipmentStatus::InTransit);
+$shipment3 = new Shipment("SHP-003", ShipmentStatus::InTransit);
+
+/** @var list<Shipment> $shipments */
+$shipments = [$shipment1, $shipment2, $shipment3];
+
+$foundShipment001 = findShipment(
+    shipments: $shipments,
+    trackingNumber: "SHP-001",
+);
+var_dump($foundShipment001->status());
+var_dump($foundShipment001->deliveredAt());
+
+$foundShipment001->markDelivered(
+    new DateTimeImmutable("2026-06-29T18:00:00+09:00"),
+);
+var_dump($foundShipment001->status());
+var_dump($foundShipment001->deliveredAt()?->format(DATE_ATOM));
+
+var_dump(findShipment(shipments: $shipments, trackingNumber: "SHP-999"));
+try {
+    var_dump(requireShipment(shipments: $shipments, trackingNumber: "SHP-999"));
+} catch (Exception $e) {
+    echo $e->getMessage(), "\n";
+}

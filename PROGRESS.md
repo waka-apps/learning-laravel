@@ -4,10 +4,10 @@
 
 ## 現在地
 
-- 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-09 - 小さな復習課題
-- 状態: review
-- 次にやること: P2-09 の理解をジャーナルにまとめ、Phase 2 完了判定に進む
+- 現在のフェーズ: Phase 3 - Laravelの入口
+- 現在のレッスン: Phase 3 の開始準備
+- 状態: not started
+- 次にやること: Laravel の最初のレッスン内容を決めて Phase 3 を開始する
 
 ## 進め方
 
@@ -33,7 +33,7 @@
 | Phase | 内容 | 状態 |
 | --- | --- | --- |
 | Phase 1 | PHPを実行して観察する | done |
-| Phase 2 | Laravel前のPHP最小セット | in progress |
+| Phase 2 | Laravel前のPHP最小セット | done |
 | Phase 3 | Laravelの入口 | not started |
 | Phase 4 | Laravel DB / Eloquent | not started |
 | Phase 5 | Laravel testing / quality | not started |
@@ -189,11 +189,11 @@
 
 ## P2-09チェックリスト
 
-- [ ] enum を property 型として使える
-- [ ] `readonly` な識別子を持つ class を書ける
-- [ ] `private` property を method 経由で更新できる
-- [ ] `DateTimeImmutable` を property または引数で扱える
-- [ ] `null` を返す関数と exception を投げる関数を使い分けられる
+- [x] enum を property 型として使える
+- [x] `readonly` な識別子を持つ class を書ける
+- [x] `private` property を method 経由で更新できる
+- [x] `DateTimeImmutable` を property または引数で扱える
+- [x] `null` を返す関数と exception を投げる関数を使い分けられる
 
 ## 理解チェック
 
@@ -249,6 +249,9 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - 課題設計では既存資産を優先して再利用する運用を `LEARNING_PLAN.md` に追記した
 - 完了済みの理解確認を再度そのまま聞かないよう、`PROGRESS.md` を再質問防止にも使う運用を `LEARNING_PLAN.md` に追記した
 - `Shipment` と `hello.php` を使った Phase 2 の統合課題を実行し、P2-09 を `review` に切り替えた
+- `Shipment.php` に `deliveredAt` と `markDelivered(DateTimeImmutable $deliveredAt)` を追加した
+- `hello.php` で `findShipment` / `requireShipment` / `markDelivered` / `deliveredAt` を組み合わせて実行確認した
+- P2-09 を `done` にし、Phase 2 を完了扱いにした
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

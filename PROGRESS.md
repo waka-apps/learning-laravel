@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-06 - Composer autoload
-- 状態: review
-- 次にやること: Composer と composer.json の役割を確認する
+- 状態: done
+- 次にやること: P2-07 - PHPDoc に進む
 
 ## 進め方
 
@@ -119,7 +119,7 @@
 - [x] enumでstatusを表現できる
 - [x] exception と `null` の使い分けを説明できる
 - [x] namespace / `use` を読める
-- [ ] Composer autoloadで複数ファイルを実行できる
+- [x] Composer autoloadで複数ファイルを実行できる
 - [ ] PHPDocで配列要素型を補足できる
 - [ ] DateTimeImmutable または Carbon の入口を理解できる
 
@@ -165,9 +165,9 @@
 
 ## P2-06チェックリスト
 
-- [ ] Composer が何のツールか説明できる
+- [x] Composer が何のツールか説明できる
 - [x] `composer.json` を `package.json` / `go.mod` に近いものとして説明できる
-- [ ] autoload の役割を説明できる
+- [x] autoload の役割を説明できる
 - [x] `require_once` なしで class を使える流れを説明できる
 - [x] `vendor/autoload.php` の意味を説明できる
 
@@ -257,6 +257,10 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-06 を `in progress` に切り替えた
 - P2-06 で `composer.json` に PSR-4 autoload を追加し、`vendor/autoload.php` 経由で実行を維持した
 - P2-06 を `review` に切り替えた
+- P2-06 で Composer は依存管理と autoload のためのツールだと説明できた
+- P2-06 で `composer.json` は依存関係と project 設定を持つファイルだと説明できた
+- P2-06 で `vendor/autoload.php` は必要な class を後から解決する loader の入口だと整理した
+- P2-06 を `done` に切り替えた
 
 ## 保留事項
 

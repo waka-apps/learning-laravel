@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-09 - 小さな復習課題
-- 状態: not started
-- 次にやること: Phase 2 の内容を組み合わせた小さな復習課題に進む
+- 状態: in progress
+- 次にやること: enum / private / readonly / exception / DateTimeImmutable を組み合わせた小さな CLI 課題に取り組む
 
 ## 進め方
 
@@ -187,6 +187,14 @@
 - [x] ドメイン上の事実日時に immutable が向く理由を説明できる
 - [x] 関数の引数と戻り値で `DateTimeImmutable` を扱える
 
+## P2-09チェックリスト
+
+- [ ] enum を property 型として使える
+- [ ] `readonly` な識別子を持つ class を書ける
+- [ ] `private` property を method 経由で更新できる
+- [ ] `DateTimeImmutable` を property または引数で扱える
+- [ ] `null` を返す関数と exception を投げる関数を使い分けられる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -237,6 +245,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-08 を `review` に切り替えた
 - `hello.php` で immutable / mutable の比較関数を書き、P2-08 を完了にした
 - 次のレッスンを P2-09 に設定した
+- P2-09 を `in progress` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

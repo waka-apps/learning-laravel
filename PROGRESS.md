@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-08 - 日時
-- 状態: in progress
-- 次にやること: DateTimeImmutable の基本を理解し、mutable な日時との違いを確認する
+- 状態: review
+- 次にやること: `Shipment` に日時を持たせる小課題で、`DateTimeImmutable` を使う理由を実装で確認する
 
 ## 進め方
 
@@ -179,6 +179,14 @@
 - [x] function の上に最小の PHPDoc を書ける
 - [x] PHP の型宣言と PHPDoc の役割の違いを説明できる
 
+## P2-08チェックリスト
+
+- [x] `DateTimeImmutable` が immutable な日時オブジェクトだと説明できる
+- [x] `DateTime` が mutable であることを実行結果で確認した
+- [x] `modify()` の結果が元オブジェクトを変更するかどうかを比較できる
+- [x] ドメイン上の事実日時に immutable が向く理由を説明できる
+- [ ] `Shipment` に日時 property を追加して扱える
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -225,6 +233,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - 質問文の曖昧さを避ける運用を `LEARNING_PLAN.md` に反映した
 - P2-08 を `in progress` に切り替えた
 - `DateTimeImmutable` を入口に、PHP の日時表現を学ぶ方針にした
+- `DateTimeImmutable` と `DateTime` の違いを実行結果から説明できることを確認した
+- P2-08 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

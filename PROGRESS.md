@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-06 - Composer autoload
-- 状態: done
-- 次にやること: P2-07 - PHPDoc に進む
+- 現在のレッスン: P2-07 - PHPDoc
+- 状態: in progress
+- 次にやること: array の要素型を PHPDoc で補足する
 
 ## 進め方
 
@@ -171,6 +171,14 @@
 - [x] `require_once` なしで class を使える流れを説明できる
 - [x] `vendor/autoload.php` の意味を説明できる
 
+## P2-07チェックリスト
+
+- [ ] PHPDoc が何のためにあるか説明できる
+- [ ] `@param list<Shipment> $shipments` を読める
+- [ ] `array` だけでは不足する情報を説明できる
+- [ ] function の上に最小の PHPDoc を書ける
+- [ ] PHP の型宣言と PHPDoc の役割の違いを説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -261,6 +269,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-06 で `composer.json` は依存関係と project 設定を持つファイルだと説明できた
 - P2-06 で `vendor/autoload.php` は必要な class を後から解決する loader の入口だと整理した
 - P2-06 を `done` に切り替えた
+- P2-07 を `in progress` に切り替えた
 
 ## 保留事項
 

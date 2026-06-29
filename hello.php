@@ -6,6 +6,9 @@ require_once __DIR__ . "/vendor/autoload.php";
 use App\Domain\Shipment\Shipment;
 use App\Domain\Shipment\ShipmentStatus;
 
+/**
+ * @param list<Shipment> $shipments
+ */
 function findShipment(array $shipments, string $trackingNumber): ?Shipment
 {
     foreach ($shipments as $shipment) {
@@ -17,6 +20,9 @@ function findShipment(array $shipments, string $trackingNumber): ?Shipment
     return null;
 }
 
+/**
+ * @param list<Shipment> $shipments
+ */
 function requireShipment(array $shipments, string $trackingNumber): Shipment
 {
     $shipment = findShipment($shipments, $trackingNumber);
@@ -31,6 +37,8 @@ function requireShipment(array $shipments, string $trackingNumber): Shipment
 $shipment1 = new Shipment("SHP-001", ShipmentStatus::InTransit);
 $shipment2 = new Shipment("SHP-002", ShipmentStatus::InTransit);
 $shipment3 = new Shipment("SHP-003", ShipmentStatus::InTransit);
+
+/** @var list<Shipment> $shipments */
 $shipments = [$shipment1, $shipment2, $shipment3];
 
 var_dump(findShipment(shipments: $shipments, trackingNumber: "SHP-999"));

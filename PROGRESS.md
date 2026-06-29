@@ -161,7 +161,7 @@
 - [x] `use App\\Domain\\Shipment\\Shipment;` を読める
 - [x] class を別ファイルに分けても使えることを確認した
 - [ ] `namespace` は名前の衝突を避ける仕組みだと説明できる
-- [ ] `use` は完全修飾名を短く書くための import だと説明できる
+- [x] `use` は完全修飾名を短く書くための import だと説明できる
 
 ## 理解チェック
 
@@ -242,6 +242,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-05 を `in progress` に切り替えた
 - P2-05 で Shipment / ShipmentStatus を別ファイルへ分割し、namespace と use を使って実行を維持した
 - P2-05 を `review` に切り替えた
+- P2-05 で `use` は完全修飾名を短く書く import だと説明できた
+- P2-05 で `namespace` は class の所属先を表すと説明できた
 
 ## 保留事項
 

@@ -1,39 +1,11 @@
 <?php
 declare(strict_types=1);
 
-enum ShipmentStatus: string
-{
-    case Accepted = "accepted";
-    case InTransit = "in_transit";
-    case Delivered = "delivered";
-}
+require_once __DIR__ . "/src/Domain/Shipment/ShipmentStatus.php";
+require_once __DIR__ . "/src/Domain/Shipment/Shipment.php";
 
-class Shipment
-{
-    public function __construct(
-        public readonly string $trackingNumber,
-        private ShipmentStatus $status,
-    ) {}
-
-    public function status(): string
-    {
-        return $this->status->value;
-    }
-
-    public function markDelivered(): void
-    {
-        $this->status = ShipmentStatus::Delivered;
-    }
-
-    public function statusLabel(): string
-    {
-        return match ($this->status) {
-            ShipmentStatus::Accepted => "Accepted",
-            ShipmentStatus::InTransit => "In transit",
-            ShipmentStatus::Delivered => "Delivered",
-        };
-    }
-}
+use App\Domain\Shipment\Shipment;
+use App\Domain\Shipment\ShipmentStatus;
 
 function findShipment(array $shipments, string $trackingNumber): ?Shipment
 {

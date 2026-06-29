@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-05 - namespace / use
-- 状態: in progress
+- 状態: review
 - 次にやること: class を別ファイルに分けて namespace / use を読む
 
 ## 進め方
@@ -157,9 +157,9 @@
 
 ## P2-05チェックリスト
 
-- [ ] `namespace App\\Domain\\Shipment;` を読める
-- [ ] `use App\\Domain\\Shipment\\Shipment;` を読める
-- [ ] class を別ファイルに分けても使えることを確認した
+- [x] `namespace App\\Domain\\Shipment;` を読める
+- [x] `use App\\Domain\\Shipment\\Shipment;` を読める
+- [x] class を別ファイルに分けても使えることを確認した
 - [ ] `namespace` は名前の衝突を避ける仕組みだと説明できる
 - [ ] `use` は完全修飾名を短く書くための import だと説明できる
 
@@ -240,6 +240,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-04 で「見つからないのが普通なら null、異常なら exception」と使い分けを説明できた
 - P2-04 を `done` に切り替えた
 - P2-05 を `in progress` に切り替えた
+- P2-05 で Shipment / ShipmentStatus を別ファイルへ分割し、namespace と use を使って実行を維持した
+- P2-05 を `review` に切り替えた
 
 ## 保留事項
 

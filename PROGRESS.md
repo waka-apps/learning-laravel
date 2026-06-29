@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-07 - PHPDoc
-- 状態: done
-- 次にやること: P2-08 - DateTimeImmutable に進む前に、Phase 2 の残項目を見直す
+- 現在のレッスン: P2-08 - 日時
+- 状態: in progress
+- 次にやること: DateTimeImmutable の基本を理解し、mutable な日時との違いを確認する
 
 ## 進め方
 
@@ -218,6 +218,13 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Day 4 を `review` に切り替えた
 - Day 4 を `done` に切り替えた
 - Day 5 を `in progress` に切り替えた
+
+### 2026-06-29
+
+- P2-07 を完了した
+- 質問文の曖昧さを避ける運用を `LEARNING_PLAN.md` に反映した
+- P2-08 を `in progress` に切り替えた
+- `DateTimeImmutable` を入口に、PHP の日時表現を学ぶ方針にした
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

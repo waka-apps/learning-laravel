@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-04 - exception と `null` の使い分け
-- 状態: done
-- 次にやること: P2-05 - namespace / use に進む
+- 現在のレッスン: P2-05 - namespace / use
+- 状態: in progress
+- 次にやること: class を別ファイルに分けて namespace / use を読む
 
 ## 進め方
 
@@ -155,6 +155,14 @@
 - [x] 見つからないことが「普通」か「異常」かで `null` と exception を使い分けられる
 - [x] `try` / `catch` の基本形を読める
 
+## P2-05チェックリスト
+
+- [ ] `namespace App\\Domain\\Shipment;` を読める
+- [ ] `use App\\Domain\\Shipment\\Shipment;` を読める
+- [ ] class を別ファイルに分けても使えることを確認した
+- [ ] `namespace` は名前の衝突を避ける仕組みだと説明できる
+- [ ] `use` は完全修飾名を短く書くための import だと説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -231,6 +239,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-04 で `?Shipment` は `Shipment | null` を表す戻り値型だと整理した
 - P2-04 で「見つからないのが普通なら null、異常なら exception」と使い分けを説明できた
 - P2-04 を `done` に切り替えた
+- P2-05 を `in progress` に切り替えた
 
 ## 保留事項
 

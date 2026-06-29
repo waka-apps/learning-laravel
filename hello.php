@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . "/src/Domain/Shipment/ShipmentStatus.php";
-require_once __DIR__ . "/src/Domain/Shipment/Shipment.php";
+require_once __DIR__ . "/vendor/autoload.php";
 
 use App\Domain\Shipment\Shipment;
 use App\Domain\Shipment\ShipmentStatus;

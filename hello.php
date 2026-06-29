@@ -1,50 +1,27 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . "/vendor/autoload.php";
+function estimateArrivalImmutable(
+    DateTimeImmutable $shippedAt,
+): DateTimeImmutable {
+    return $shippedAt->modify("+2 days");
+}
 
-use App\Domain\Shipment\Shipment;
-use App\Domain\Shipment\ShipmentStatus;
-
-/**
- * @param list<Shipment> $shipments
- */
-function findShipment(array $shipments, string $trackingNumber): ?Shipment
+function estimateArrival(DateTime $shippedAt): DateTime
 {
-    foreach ($shipments as $shipment) {
-        if ($shipment->trackingNumber === $trackingNumber) {
-            return $shipment;
-        }
-    }
-
-    return null;
+    return $shippedAt->modify("+2 days");
 }
 
-/**
- * @param list<Shipment> $shipments
- */
-function requireShipment(array $shipments, string $trackingNumber): Shipment
-{
-    $shipment = findShipment($shipments, $trackingNumber);
+$shippedAt = new DateTimeImmutable("2026-06-29T09:00:00+09:00");
+$estimatedArrivalAt = estimateArrivalImmutable($shippedAt);
 
-    if ($shipment === null) {
-        throw new Exception("Shipment not found: {$trackingNumber}");
-    }
+echo "Immutable\n";
+var_dump($shippedAt->format(DATE_ATOM));
+var_dump($estimatedArrivalAt->format(DATE_ATOM));
 
-    return $shipment;
-}
+$mutableShippedAt = new DateTime("2026-06-29T09:00:00+09:00");
+$mutableEstimatedArrivalAt = estimateArrival($mutableShippedAt);
 
-$shipment1 = new Shipment("SHP-001", ShipmentStatus::InTransit);
-$shipment2 = new Shipment("SHP-002", ShipmentStatus::InTransit);
-$shipment3 = new Shipment("SHP-003", ShipmentStatus::InTransit);
-
-/** @var list<Shipment> $shipments */
-$shipments = [$shipment1, $shipment2, $shipment3];
-
-var_dump(findShipment(shipments: $shipments, trackingNumber: "SHP-999"));
-
-try {
-    var_dump(requireShipment(shipments: $shipments, trackingNumber: "SHP-999"));
-} catch (Exception $e) {
-    echo $e->getMessage(), "\n";
-}
+echo "Mutable\n";
+var_dump($mutableShippedAt->format(DATE_ATOM));
+var_dump($mutableEstimatedArrivalAt->format(DATE_ATOM));

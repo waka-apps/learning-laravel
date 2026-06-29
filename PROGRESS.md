@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-08 - 日時
-- 状態: review
-- 次にやること: `Shipment` に日時を持たせる小課題で、`DateTimeImmutable` を使う理由を実装で確認する
+- 現在のレッスン: P2-09 - 小さな復習課題
+- 状態: not started
+- 次にやること: Phase 2 の内容を組み合わせた小さな復習課題に進む
 
 ## 進め方
 
@@ -121,7 +121,7 @@
 - [x] namespace / `use` を読める
 - [x] Composer autoloadで複数ファイルを実行できる
 - [x] PHPDocで配列要素型を補足できる
-- [ ] DateTimeImmutable または Carbon の入口を理解できる
+- [x] DateTimeImmutable または Carbon の入口を理解できる
 
 ## P2-01チェックリスト
 
@@ -185,7 +185,7 @@
 - [x] `DateTime` が mutable であることを実行結果で確認した
 - [x] `modify()` の結果が元オブジェクトを変更するかどうかを比較できる
 - [x] ドメイン上の事実日時に immutable が向く理由を説明できる
-- [ ] `Shipment` に日時 property を追加して扱える
+- [x] 関数の引数と戻り値で `DateTimeImmutable` を扱える
 
 ## 理解チェック
 
@@ -235,6 +235,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `DateTimeImmutable` を入口に、PHP の日時表現を学ぶ方針にした
 - `DateTimeImmutable` と `DateTime` の違いを実行結果から説明できることを確認した
 - P2-08 を `review` に切り替えた
+- `hello.php` で immutable / mutable の比較関数を書き、P2-08 を完了にした
+- 次のレッスンを P2-09 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

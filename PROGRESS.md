@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-06 - Composer autoload
-- 状態: in progress
+- 状態: review
 - 次にやること: Composer と composer.json の役割を確認する
 
 ## 進め方
@@ -166,10 +166,10 @@
 ## P2-06チェックリスト
 
 - [ ] Composer が何のツールか説明できる
-- [ ] `composer.json` を `package.json` / `go.mod` に近いものとして説明できる
+- [x] `composer.json` を `package.json` / `go.mod` に近いものとして説明できる
 - [ ] autoload の役割を説明できる
-- [ ] `require_once` なしで class を使える流れを説明できる
-- [ ] `vendor/autoload.php` の意味を説明できる
+- [x] `require_once` なしで class を使える流れを説明できる
+- [x] `vendor/autoload.php` の意味を説明できる
 
 ## 理解チェック
 
@@ -255,6 +255,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-05 で namespace は完全修飾名の衝突を避け、サブドメインごとの名前付けにも役立つと整理した
 - P2-05 を `done` に切り替えた
 - P2-06 を `in progress` に切り替えた
+- P2-06 で `composer.json` に PSR-4 autoload を追加し、`vendor/autoload.php` 経由で実行を維持した
+- P2-06 を `review` に切り替えた
 
 ## 保留事項
 

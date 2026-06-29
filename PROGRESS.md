@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
-- 現在のレッスン: P2-05 - namespace / use
-- 状態: done
-- 次にやること: P2-06 - Composer autoload に進む
+- 現在のレッスン: P2-06 - Composer autoload
+- 状態: in progress
+- 次にやること: Composer と composer.json の役割を確認する
 
 ## 進め方
 
@@ -163,6 +163,14 @@
 - [x] `namespace` は名前の衝突を避ける仕組みだと説明できる
 - [x] `use` は完全修飾名を短く書くための import だと説明できる
 
+## P2-06チェックリスト
+
+- [ ] Composer が何のツールか説明できる
+- [ ] `composer.json` を `package.json` / `go.mod` に近いものとして説明できる
+- [ ] autoload の役割を説明できる
+- [ ] `require_once` なしで class を使える流れを説明できる
+- [ ] `vendor/autoload.php` の意味を説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -246,6 +254,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-05 で `namespace` は class の所属先を表すと説明できた
 - P2-05 で namespace は完全修飾名の衝突を避け、サブドメインごとの名前付けにも役立つと整理した
 - P2-05 を `done` に切り替えた
+- P2-06 を `in progress` に切り替えた
 
 ## 保留事項
 

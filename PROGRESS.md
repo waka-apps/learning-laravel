@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-07 - PHPDoc
-- 状態: review
-- 次にやること: array の要素型を PHPDoc で補足する
+- 状態: done
+- 次にやること: P2-08 - DateTimeImmutable に進む前に、Phase 2 の残項目を見直す
 
 ## 進め方
 
@@ -120,7 +120,7 @@
 - [x] exception と `null` の使い分けを説明できる
 - [x] namespace / `use` を読める
 - [x] Composer autoloadで複数ファイルを実行できる
-- [ ] PHPDocで配列要素型を補足できる
+- [x] PHPDocで配列要素型を補足できる
 - [ ] DateTimeImmutable または Carbon の入口を理解できる
 
 ## P2-01チェックリスト
@@ -173,11 +173,11 @@
 
 ## P2-07チェックリスト
 
-- [ ] PHPDoc が何のためにあるか説明できる
-- [ ] `@param list<Shipment> $shipments` を読める
-- [ ] `array` だけでは不足する情報を説明できる
+- [x] PHPDoc が何のためにあるか説明できる
+- [x] `@param list<Shipment> $shipments` を読める
+- [x] `array` だけでは不足する情報を説明できる
 - [x] function の上に最小の PHPDoc を書ける
-- [ ] PHP の型宣言と PHPDoc の役割の違いを説明できる
+- [x] PHP の型宣言と PHPDoc の役割の違いを説明できる
 
 ## 理解チェック
 
@@ -272,6 +272,10 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-07 を `in progress` に切り替えた
 - P2-07 で `findShipment()` / `requireShipment()` に PHPDoc を追加した
 - P2-07 を `review` に切り替えた
+- P2-07 で `list<Shipment>` は Shipment インスタンスだけが入る添字配列だと説明できた
+- P2-07 で PHPDoc は補足情報、PHP 型宣言は実行時に効くという役割差を整理した
+- P2-07 の確認質問が曖昧だったため、今後は「何を意味するか」で確認する方針に改めた
+- P2-07 を `done` に切り替えた
 
 ## 保留事項
 

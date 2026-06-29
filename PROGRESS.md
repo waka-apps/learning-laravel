@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 2 - Laravel前のPHP最小セット
 - 現在のレッスン: P2-05 - namespace / use
-- 状態: review
-- 次にやること: class を別ファイルに分けて namespace / use を読む
+- 状態: done
+- 次にやること: P2-06 - Composer autoload に進む
 
 ## 進め方
 
@@ -118,7 +118,7 @@
 - [x] `readonly` を使う場面を説明できる
 - [x] enumでstatusを表現できる
 - [x] exception と `null` の使い分けを説明できる
-- [ ] namespace / `use` を読める
+- [x] namespace / `use` を読める
 - [ ] Composer autoloadで複数ファイルを実行できる
 - [ ] PHPDocで配列要素型を補足できる
 - [ ] DateTimeImmutable または Carbon の入口を理解できる
@@ -160,7 +160,7 @@
 - [x] `namespace App\\Domain\\Shipment;` を読める
 - [x] `use App\\Domain\\Shipment\\Shipment;` を読める
 - [x] class を別ファイルに分けても使えることを確認した
-- [ ] `namespace` は名前の衝突を避ける仕組みだと説明できる
+- [x] `namespace` は名前の衝突を避ける仕組みだと説明できる
 - [x] `use` は完全修飾名を短く書くための import だと説明できる
 
 ## 理解チェック
@@ -244,6 +244,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-05 を `review` に切り替えた
 - P2-05 で `use` は完全修飾名を短く書く import だと説明できた
 - P2-05 で `namespace` は class の所属先を表すと説明できた
+- P2-05 で namespace は完全修飾名の衝突を避け、サブドメインごとの名前付けにも役立つと整理した
+- P2-05 を `done` に切り替えた
 
 ## 保留事項
 

@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: P3-02 - `php artisan` と Laravel project の入口
-- 状態: review
-- 次にやること: Laravel project を作る前に、`php artisan` と作成後の最初の確認ポイントを理解する
+- 現在のレッスン: P3-03 - Laravel project を作って最初に動かす
+- 状態: not started
+- 次にやること: Laravel installer または Composer を使って project を作成し、最初の route を確認する
 
 ## 進め方
 
@@ -200,7 +200,7 @@
 - [x] Laravel project の基本ディレクトリ構造を説明できる
 - [x] `routes/web.php` と `bootstrap/app.php` の役割を説明できる
 - [x] Route から Controller が呼ばれる流れを説明できる
-- [ ] `php artisan` が何のためのコマンドか説明できる
+- [x] `php artisan` が何のためのコマンドか説明できる
 - [ ] 最小の JSON response を返す Route または Controller を作れる
 
 ## P3-01チェックリスト
@@ -213,11 +213,11 @@
 
 ## P3-02チェックリスト
 
-- [ ] `php artisan` が Laravel 専用 CLI だと説明できる
-- [ ] `php artisan list` と `php artisan help migrate` の役割を説明できる
-- [ ] `php artisan migrate` が何をするコマンドか説明できる
-- [ ] `laravel new` と `composer run dev` の位置づけを説明できる
-- [ ] Laravel project 作成直後に最初に見るファイルを 2 つ挙げられる
+- [x] `php artisan` が Laravel 専用 CLI だと説明できる
+- [x] `php artisan list` と `php artisan help migrate` の役割を説明できる
+- [x] `php artisan migrate` が何をするコマンドか説明できる
+- [x] `laravel new` と `composer run dev` の位置づけを説明できる
+- [x] Laravel project 作成直後に最初に見るファイルを 2 つ挙げられる
 
 ## 理解チェック
 
@@ -282,6 +282,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P3-01 を `done` にし、次のレッスンを P3-02 に設定した
 - P3-02 を `in progress` に切り替えた
 - `php artisan`、`laravel new`、`composer run dev` の違いを整理し、P3-02 を `review` に切り替えた
+- P3-02 を `done` にし、次のレッスンを P3-03 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

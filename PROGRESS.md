@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-03 - Laravel project を作って最初に動かす
-- 状態: not started
-- 次にやること: Laravel installer または Composer を使って project を作成し、最初の route を確認する
+- 状態: in progress
+- 次にやること: `laravel-app/` を作成し、Laravel project を起動して `routes/web.php` を確認する
 
 ## 進め方
 
@@ -219,6 +219,14 @@
 - [x] `laravel new` と `composer run dev` の位置づけを説明できる
 - [x] Laravel project 作成直後に最初に見るファイルを 2 つ挙げられる
 
+## P3-03チェックリスト
+
+- [ ] 既存 repo を壊さずに Laravel project 用の subdirectory を作れる
+- [ ] Laravel project を作成できる
+- [ ] `composer run dev` または同等コマンドで起動できる
+- [ ] `routes/web.php` を開いてデフォルト route を確認できる
+- [ ] `php artisan route:list` の結果を確認できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -283,6 +291,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P3-02 を `in progress` に切り替えた
 - `php artisan`、`laravel new`、`composer run dev` の違いを整理し、P3-02 を `review` に切り替えた
 - P3-02 を `done` にし、次のレッスンを P3-03 に設定した
+- P3-03 を `in progress` に切り替え、Laravel project は `laravel-app/` に作る方針にした
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: P3-01 - Laravel の構造と Route の入口
-- 状態: review
-- 次にやること: `bootstrap/app.php` と middleware の違いを整理し、P3-01 を完了に進める
+- 現在のレッスン: P3-02 - `php artisan` と Laravel project の入口
+- 状態: not started
+- 次にやること: Laravel project を作る前に、`php artisan` と作成後の最初の確認ポイントを理解する
 
 ## 進め方
 
@@ -197,19 +197,19 @@
 
 ## Phase 3チェックリスト
 
-- [ ] Laravel project の基本ディレクトリ構造を説明できる
-- [ ] `routes/web.php` と `bootstrap/app.php` の役割を説明できる
-- [ ] Route から Controller が呼ばれる流れを説明できる
+- [x] Laravel project の基本ディレクトリ構造を説明できる
+- [x] `routes/web.php` と `bootstrap/app.php` の役割を説明できる
+- [x] Route から Controller が呼ばれる流れを説明できる
 - [ ] `php artisan` が何のためのコマンドか説明できる
 - [ ] 最小の JSON response を返す Route または Controller を作れる
 
 ## P3-01チェックリスト
 
-- [ ] `app` directory に何が入るか説明できる
-- [ ] `routes` directory に何が入るか説明できる
-- [ ] `bootstrap/app.php` が Route 読み込み設定を持つと説明できる
-- [ ] `routes/web.php` の Route 定義例を読める
-- [ ] Closure Route と Controller Route の違いを説明できる
+- [x] `app` directory に何が入るか説明できる
+- [x] `routes` directory に何が入るか説明できる
+- [x] `bootstrap/app.php` が Route 読み込み設定を持つと説明できる
+- [x] `routes/web.php` の Route 定義例を読める
+- [x] Closure Route と Controller Route の違いを説明できる
 
 ## 理解チェック
 
@@ -270,6 +270,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P2-09 を `done` にし、Phase 2 を完了扱いにした
 - Phase 3 を開始し、P3-01 を `in progress` に切り替えた
 - Laravel の構造、Route、`bootstrap/app.php` の入口説明を行い、P3-01 を `review` に切り替えた
+- 通常 Laravel と Octane での `bootstrap/app.php` の捉え方の違いを整理した
+- P3-01 を `done` にし、次のレッスンを P3-02 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

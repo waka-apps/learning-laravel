@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-02 - `php artisan` と Laravel project の入口
-- 状態: in progress
+- 状態: review
 - 次にやること: Laravel project を作る前に、`php artisan` と作成後の最初の確認ポイントを理解する
 
 ## 進め方
@@ -281,6 +281,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - 通常 Laravel と Octane での `bootstrap/app.php` の捉え方の違いを整理した
 - P3-01 を `done` にし、次のレッスンを P3-02 に設定した
 - P3-02 を `in progress` に切り替えた
+- `php artisan`、`laravel new`、`composer run dev` の違いを整理し、P3-02 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-01 - Laravel の構造と Route の入口
-- 状態: in progress
-- 次にやること: `routes/web.php`、`bootstrap/app.php`、`app/Http` の役割を理解する
+- 状態: review
+- 次にやること: `bootstrap/app.php` と middleware の違いを整理し、P3-01 を完了に進める
 
 ## 進め方
 
@@ -269,6 +269,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `hello.php` で `findShipment` / `requireShipment` / `markDelivered` / `deliveredAt` を組み合わせて実行確認した
 - P2-09 を `done` にし、Phase 2 を完了扱いにした
 - Phase 3 を開始し、P3-01 を `in progress` に切り替えた
+- Laravel の構造、Route、`bootstrap/app.php` の入口説明を行い、P3-01 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-02 - `php artisan` と Laravel project の入口
-- 状態: not started
+- 状態: in progress
 - 次にやること: Laravel project を作る前に、`php artisan` と作成後の最初の確認ポイントを理解する
 
 ## 進め方
@@ -211,6 +211,14 @@
 - [x] `routes/web.php` の Route 定義例を読める
 - [x] Closure Route と Controller Route の違いを説明できる
 
+## P3-02チェックリスト
+
+- [ ] `php artisan` が Laravel 専用 CLI だと説明できる
+- [ ] `php artisan list` と `php artisan help migrate` の役割を説明できる
+- [ ] `php artisan migrate` が何をするコマンドか説明できる
+- [ ] `laravel new` と `composer run dev` の位置づけを説明できる
+- [ ] Laravel project 作成直後に最初に見るファイルを 2 つ挙げられる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -272,6 +280,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - Laravel の構造、Route、`bootstrap/app.php` の入口説明を行い、P3-01 を `review` に切り替えた
 - 通常 Laravel と Octane での `bootstrap/app.php` の捉え方の違いを整理した
 - P3-01 を `done` にし、次のレッスンを P3-02 に設定した
+- P3-02 を `in progress` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: Phase 3 の開始準備
-- 状態: not started
-- 次にやること: Laravel の最初のレッスン内容を決めて Phase 3 を開始する
+- 現在のレッスン: P3-01 - Laravel の構造と Route の入口
+- 状態: in progress
+- 次にやること: `routes/web.php`、`bootstrap/app.php`、`app/Http` の役割を理解する
 
 ## 進め方
 
@@ -34,7 +34,7 @@
 | --- | --- | --- |
 | Phase 1 | PHPを実行して観察する | done |
 | Phase 2 | Laravel前のPHP最小セット | done |
-| Phase 3 | Laravelの入口 | not started |
+| Phase 3 | Laravelの入口 | in progress |
 | Phase 4 | Laravel DB / Eloquent | not started |
 | Phase 5 | Laravel testing / quality | not started |
 | Phase 6 | Laravel設計と物流ドメイン | not started |
@@ -195,6 +195,22 @@
 - [x] `DateTimeImmutable` を property または引数で扱える
 - [x] `null` を返す関数と exception を投げる関数を使い分けられる
 
+## Phase 3チェックリスト
+
+- [ ] Laravel project の基本ディレクトリ構造を説明できる
+- [ ] `routes/web.php` と `bootstrap/app.php` の役割を説明できる
+- [ ] Route から Controller が呼ばれる流れを説明できる
+- [ ] `php artisan` が何のためのコマンドか説明できる
+- [ ] 最小の JSON response を返す Route または Controller を作れる
+
+## P3-01チェックリスト
+
+- [ ] `app` directory に何が入るか説明できる
+- [ ] `routes` directory に何が入るか説明できる
+- [ ] `bootstrap/app.php` が Route 読み込み設定を持つと説明できる
+- [ ] `routes/web.php` の Route 定義例を読める
+- [ ] Closure Route と Controller Route の違いを説明できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -252,6 +268,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `Shipment.php` に `deliveredAt` と `markDelivered(DateTimeImmutable $deliveredAt)` を追加した
 - `hello.php` で `findShipment` / `requireShipment` / `markDelivered` / `deliveredAt` を組み合わせて実行確認した
 - P2-09 を `done` にし、Phase 2 を完了扱いにした
+- Phase 3 を開始し、P3-01 を `in progress` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

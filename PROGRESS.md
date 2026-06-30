@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-03 - Laravel project を作って最初に動かす
-- 状態: in progress
-- 次にやること: `laravel-app/` を作成し、Laravel project を起動して `routes/web.php` を確認する
+- 状態: review
+- 次にやること: `laravel/routes/web.php` のデフォルト route と `route:list` の対応を確認し、P3-03 を完了に進める
 
 ## 進め方
 
@@ -292,6 +292,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `php artisan`、`laravel new`、`composer run dev` の違いを整理し、P3-02 を `review` に切り替えた
 - P3-02 を `done` にし、次のレッスンを P3-03 に設定した
 - P3-03 を `in progress` に切り替え、Laravel project は `laravel-app/` に作る方針にした
+- 実際には `laravel/` に project を作成し、`php artisan route:list` と `php artisan serve` の動作を確認した
+- P3-03 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

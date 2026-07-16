@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: P3-03 - Laravel project を作って最初に動かす
-- 状態: review
-- 次にやること: `laravel/routes/web.php` のデフォルト route と `route:list` の対応を確認し、P3-03 を完了に進める
+- 現在のレッスン: P3-04 - 最小の JSON response を返す
+- 状態: not started
+- 次にやること: `routes/web.php` の Closure Route を変更し、最小の JSON response を返す
 
 ## 進め方
 
@@ -221,11 +221,11 @@
 
 ## P3-03チェックリスト
 
-- [ ] 既存 repo を壊さずに Laravel project 用の subdirectory を作れる
-- [ ] Laravel project を作成できる
-- [ ] `composer run dev` または同等コマンドで起動できる
-- [ ] `routes/web.php` を開いてデフォルト route を確認できる
-- [ ] `php artisan route:list` の結果を確認できる
+- [x] 既存 repo を壊さずに Laravel project 用の subdirectory を作れる
+- [x] Laravel project を作成できる
+- [x] `composer run dev` または同等コマンドで起動できる
+- [x] `routes/web.php` を開いてデフォルト route を確認できる
+- [x] `php artisan route:list` の結果を確認できる
 
 ## 理解チェック
 
@@ -294,6 +294,8 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P3-03 を `in progress` に切り替え、Laravel project は `laravel-app/` に作る方針にした
 - 実際には `laravel/` に project を作成し、`php artisan route:list` と `php artisan serve` の動作を確認した
 - P3-03 を `review` に切り替えた
+- `route:list` の `routes/web.php:5` は route 定義のソース位置を示すと整理した
+- P3-03 を `done` にし、次のレッスンを P3-04 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

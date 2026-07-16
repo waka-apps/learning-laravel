@@ -6,7 +6,7 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-04 - 最小の JSON response を返す
-- 状態: in progress
+- 状態: review
 - 次にやること: `routes/web.php` の Closure Route を変更し、最小の JSON response を返す
 
 ## 進め方
@@ -304,6 +304,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `route:list` の `routes/web.php:5` は route 定義のソース位置を示すと整理した
 - P3-03 を `done` にし、次のレッスンを P3-04 に設定した
 - P3-04 を `in progress` に切り替えた
+- `view('welcome')` を配列 return に変更し、JSON response を確認して P3-04 を `review` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

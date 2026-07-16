@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: P3-04 - 最小の JSON response を返す
-- 状態: review
-- 次にやること: `routes/web.php` の Closure Route を変更し、最小の JSON response を返す
+- 現在のレッスン: P3-05 - Closure Route から Controller Route へ
+- 状態: not started
+- 次にやること: Controller を作り、Closure Route を Controller Route に置き換える
 
 ## 進め方
 
@@ -201,7 +201,7 @@
 - [x] `routes/web.php` と `bootstrap/app.php` の役割を説明できる
 - [x] Route から Controller が呼ばれる流れを説明できる
 - [x] `php artisan` が何のためのコマンドか説明できる
-- [ ] 最小の JSON response を返す Route または Controller を作れる
+- [x] 最小の JSON response を返す Route または Controller を作れる
 
 ## P3-01チェックリスト
 
@@ -229,10 +229,10 @@
 
 ## P3-04チェックリスト
 
-- [ ] `routes/web.php` の Closure Route を編集できる
-- [ ] `view('welcome')` を配列 return に置き換えられる
-- [ ] ブラウザまたは curl で JSON response を確認できる
-- [ ] HTML response と JSON response の違いを説明できる
+- [x] `routes/web.php` の Closure Route を編集できる
+- [x] `view('welcome')` を配列 return に置き換えられる
+- [x] ブラウザまたは curl で JSON response を確認できる
+- [x] HTML response と JSON response の違いを説明できる
 
 ## 理解チェック
 
@@ -305,6 +305,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - P3-03 を `done` にし、次のレッスンを P3-04 に設定した
 - P3-04 を `in progress` に切り替えた
 - `view('welcome')` を配列 return に変更し、JSON response を確認して P3-04 を `review` に切り替えた
+- P3-04 を `done` にし、次のレッスンを P3-05 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

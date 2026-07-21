@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-05 - Closure Route から Controller Route へ
-- 状態: in progress
-- 次にやること: Controller を作り、Closure Route を Controller Route に置き換える
+- 状態: done
+- 次にやること: P3-06 - Request / Response の入口
 
 ## 進め方
 
@@ -236,11 +236,11 @@
 
 ## P3-05チェックリスト
 
-- [ ] `php artisan make:controller` が何を生成するか確認できる
-- [ ] Controller class に method を追加できる
-- [ ] `routes/web.php` を Controller Route に書き換えられる
-- [ ] Closure Route と Controller Route のコード上の違いを説明できる
-- [ ] `GET /` が引き続き JSON response を返すことを確認できる
+- [x] `php artisan make:controller` が何を生成するか確認できる
+- [x] Controller class に method を追加できる
+- [x] `routes/web.php` を Controller Route に書き換えられる
+- [x] Closure Route と Controller Route のコード上の違いを説明できる
+- [x] `GET /` が引き続き JSON response を返すことを確認できる
 
 ## 理解チェック
 
@@ -315,6 +315,11 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `view('welcome')` を配列 return に変更し、JSON response を確認して P3-04 を `review` に切り替えた
 - P3-04 を `done` にし、次のレッスンを P3-05 に設定した
 - P3-05 を `in progress` に切り替えた
+- `WelcomeController` を生成し、`index()` に JSON response 用の配列 return を実装した
+- `routes/web.php` を Controller Route に置き換え、`use App\\Http\\Controllers\\WelcomeController;` で名前空間を import した
+- `php artisan route:list` で `GET /` が `WelcomeController@index` に解決されることを確認した
+- `php artisan serve` と `curl http://127.0.0.1:8000` で `{"message":"ok"}` を確認した
+- P3-05 を `done` にし、次のレッスンを P3-06 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

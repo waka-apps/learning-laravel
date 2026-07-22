@@ -8,4 +8,11 @@ class WelcomeController extends Controller
     {
         return ['message' => 'ok'];
     }
+
+    public function show(string $trackingNumber): array
+    {
+        return [
+            'tracking_number' => $trackingNumber,
+        ];
+    }
 }

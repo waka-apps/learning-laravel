@@ -6,8 +6,8 @@
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
 - 現在のレッスン: P3-06 - Route parameter と Controller method
-- 状態: in progress
-- 次にやること: URL の値を Controller method で受け取り、JSON response に含める
+- 状態: done
+- 次にやること: P3-07 - ネストした Route parameter と query parameter
 
 ## 進め方
 
@@ -244,11 +244,11 @@
 
 ## P3-06チェックリスト
 
-- [ ] Route parameter が URL の可変部分であることを説明できる
-- [ ] `routes/web.php` で `{trackingNumber}` を使う Route を書ける
-- [ ] Controller method の引数で Route parameter を受け取れる
-- [ ] 受け取った値を JSON response に含められる
-- [ ] `curl` で URL ごとに response が変わることを確認できる
+- [x] Route parameter が URL の可変部分であることを説明できる
+- [x] `routes/web.php` で `{trackingNumber}` を使う Route を書ける
+- [x] Controller method の引数で Route parameter を受け取れる
+- [x] 受け取った値を JSON response に含められる
+- [x] `curl` で URL ごとに response が変わることを確認できる
 
 ## 理解チェック
 
@@ -329,6 +329,10 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `php artisan serve` と `curl http://127.0.0.1:8000` で `{"message":"ok"}` を確認した
 - P3-05 を `done` にし、次のレッスンを P3-06 に設定した
 - P3-06 を `in progress` に切り替えた
+- `GET /shipments/{trackingNumber}` を `WelcomeController@show` に結びつけ、Route parameter を Controller method の引数で受け取った
+- 異なる tracking number を含む JSON response を `curl` で確認し、P3-06 を `review` に切り替えた
+- Route parameter は Controller method の引数として渡り、存在確認を実装しない限り任意の文字列を受け取ると説明できた
+- P3-06 を `done` にし、次のレッスンを P3-07 に設定した
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた

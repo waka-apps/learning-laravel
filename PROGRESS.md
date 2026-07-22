@@ -5,9 +5,9 @@
 ## 現在地
 
 - 現在のフェーズ: Phase 3 - Laravelの入口
-- 現在のレッスン: P3-05 - Closure Route から Controller Route へ
-- 状態: done
-- 次にやること: P3-06 - Request / Response の入口
+- 現在のレッスン: P3-06 - Route parameter と Controller method
+- 状態: in progress
+- 次にやること: URL の値を Controller method で受け取り、JSON response に含める
 
 ## 進め方
 
@@ -242,6 +242,14 @@
 - [x] Closure Route と Controller Route のコード上の違いを説明できる
 - [x] `GET /` が引き続き JSON response を返すことを確認できる
 
+## P3-06チェックリスト
+
+- [ ] Route parameter が URL の可変部分であることを説明できる
+- [ ] `routes/web.php` で `{trackingNumber}` を使う Route を書ける
+- [ ] Controller method の引数で Route parameter を受け取れる
+- [ ] 受け取った値を JSON response に含められる
+- [ ] `curl` で URL ごとに response が変わることを確認できる
+
 ## 理解チェック
 
 Day 1完了時に、自分の言葉で答えられるようにする。
@@ -320,6 +328,7 @@ Day 1完了時に、自分の言葉で答えられるようにする。
 - `php artisan route:list` で `GET /` が `WelcomeController@index` に解決されることを確認した
 - `php artisan serve` と `curl http://127.0.0.1:8000` で `{"message":"ok"}` を確認した
 - P3-05 を `done` にし、次のレッスンを P3-06 に設定した
+- P3-06 を `in progress` に切り替えた
 - Day 5 の関数分割コード実行を確認した
 - Day 5 を `review` に切り替えた
 - Day 5 を `done` に切り替えた
